@@ -41,11 +41,7 @@ jobs:
           aws-region: eu-west-2
 
       - name: deploying website with the AWS CLI
-        with:
-          node-version: 15.x
         run: aws s3 sync public/ s3://hufghani.dev --acl public-read --delete
 
       - name: Clearing cache on CloudFront
-        with:
-          node-version: 15.x
         run: aws cloudfront create-invalidation --distribution-id E9M325SZLNCB8 --paths '/*'

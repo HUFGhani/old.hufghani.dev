@@ -6,15 +6,12 @@ name: Node.js CI
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
-  
-  
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,12 +20,32 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2.1.4
-      with:
-        node-version: ${{ matrix.node-version }}
-      if: ${{ matrix.node-version }} == 12 
-    - run: yarn install
-#     - run: npm run build --if-present
-#     - run: npm test
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: installing dependencies
+        run: yarn
+
+      - name: Building website
+        run: yarn build --if-present
+
+      - name: Configure AWS credentials from Production account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          node-version: 15.x
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
+
+      - name: deploying website with the AWS CLI
+        with:
+          node-version: 15.x
+        run: aws s3 sync public/ s3://hufghani.dev --acl public-read --delete
+
+      - name: Clearing cache on CloudFront
+        with:
+          node-version: 15.x
+        run: aws cloudfront create-invalidation --distribution-id E9M325SZLNCB8 --paths '/*'

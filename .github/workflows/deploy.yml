@@ -30,7 +30,7 @@ jobs:
         run: yarn
 
       - name: Building website
-        run: yarn build --if-present
+        run: yarn build
 
       - name: Configure AWS credentials from Production account
         uses: aws-actions/configure-aws-credentials@v1

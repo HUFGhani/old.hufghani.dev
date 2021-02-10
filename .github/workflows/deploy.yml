@@ -33,6 +33,9 @@ jobs:
         run: yarn build
 
       - name: Configure AWS credentials from Production account
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
         uses: aws-actions/configure-aws-credentials@v1
         with:
           node-version: 15.x

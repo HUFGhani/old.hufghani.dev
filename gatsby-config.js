@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `hufghani-website`,
+    description: `Kick off your next, great Gatsby project with this Chakra UI starter.`,
+    author: `Hamza Ghnai`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -29,6 +31,13 @@ module.exports = {
         path: `./src/pages/`,
       },
       __key: `pages`,
+    },
+    {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        isResettingCSS: true,
+        isUsingColorMode: true,
+      },
     },
   ],
 }

@@ -1,6 +1,8 @@
 import { Box, Link } from '@chakra-ui/react'
 import { graphql, useStaticQuery } from 'gatsby'
 import React, { ReactNode } from 'react'
+import { SEOContext } from '../../contexts/seoContext'
+import useSEO from '../../hooks/useSeo'
 import Header from './../header'
 
 interface LayoutProps {
@@ -17,9 +19,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       }
     }
   `)
-
+  const testdata = useSEO()
   return (
-    <>
+    <SEOContext.Provider value={testdata}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Box as="div" margin="0 auto" maxWidth="960px" padding="0 1.0875rem 1.45rem">
         <Box as="main">{children}</Box>
@@ -31,7 +33,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
         </Box>
       </Box>
-    </>
+    </SEOContext.Provider>
   )
 }
 

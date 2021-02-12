@@ -1,8 +1,8 @@
+/* eslint-disable */
+const config = require(`./config/site`)
 module.exports = {
   siteMetadata: {
-    title: `hufghani-website`,
-    description: `Kick off your next, great Gatsby project with this Chakra UI starter.`,
-    author: `Hamza Ghnai`,
+    ...config,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -11,6 +11,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
+        name: config.title,
+        short_name: config.shortName,
+        description: config.description,
+        start_url: config.url,
+        background_color: config.backgroundColor,
+        display: `standalone`,
         icon: `src/images/icon.png`,
       },
     },
@@ -24,16 +30,16 @@ module.exports = {
       },
       __key: `images`,
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pages`,
+    //     path: `./src/pages/`,
+    //   },
+    //   __key: `pages`,
+    // },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `./src/pages/`,
-      },
-      __key: `pages`,
-    },
-    {
-      resolve: '@chakra-ui/gatsby-plugin',
+      resolve: `@chakra-ui/gatsby-plugin`,
       options: {
         isResettingCSS: true,
         isUsingColorMode: true,

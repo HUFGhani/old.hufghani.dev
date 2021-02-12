@@ -2,7 +2,7 @@ import { Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 import SEO from '../components/seo'
 
-const NotFoundPage = () => (
+const NotFoundPage: React.FC = () => (
   <>
     <SEO title="404: Not found" />
     <Heading>404: Not Found</Heading>

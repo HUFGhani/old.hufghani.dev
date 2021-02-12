@@ -1,9 +1,8 @@
-import { Box, Heading, Link, Text } from '@chakra-ui/react'
-import { Link as GatsbyLink } from 'gatsby'
+import { Box, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
+const IndexPage: React.FC = () => (
   <>
     <SEO title="Home" />
     <Heading>Hi people</Heading>
@@ -13,15 +12,7 @@ const IndexPage = () => (
     <Text fontSize="xl" my={5}>
       Now go build something great.
     </Text>
-    <Box as="div" maxWidth="300px" marginBottom="1.45rem">
-    </Box>
-    <Link as={GatsbyLink} textDecor="underline" color="purple.500" fontSize="xl" to="/page-2/">
-      Go to page 2
-    </Link>
-    <br />
-    <Link as={GatsbyLink} textDecor="underline" color="purple.500" fontSize="xl" to="/using-typescript/">
-      Go to "Using TypeScript"
-    </Link>
+    <Box as="div" maxWidth="300px" marginBottom="1.45rem"></Box>
   </>
 )
 

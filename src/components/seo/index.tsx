@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet'
 import { useSEOContext } from '../../contexts/seoContext'
 
 interface SEOProps {
-  siteTitle: string
+  pageTitle: string
 }
 
-const SEO: React.FC<SEOProps> = ({ siteTitle }) => {
+const SEO: React.FC<SEOProps> = ({ pageTitle }) => {
   const data = useSEOContext()
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>{siteTitle}</title>
+      <title>{pageTitle}</title>
       <html lang={data.siteLanguage} />
       <meta name="description" content={data.description} />
       <meta name="apple-mobile-web-app-title" content={data.shortName} />

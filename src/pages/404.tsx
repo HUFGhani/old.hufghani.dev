@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 
 const NotFoundPage: React.FC = () => (
   <>
-    <SEO title="404: Not found" />
+    <SEO pageTitle="404: Not found" />
     <Heading>404: Not Found</Heading>
     <Text fontSize="xl" my={5}>
       You just hit a route that doesn&#39;t exist... the sadness.

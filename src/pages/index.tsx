@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 
 const IndexPage: React.FC = () => (
   <>
-    <SEO title="Home" />
+    <SEO pageTitle="Home" />
     <Heading>Hi people</Heading>
     <Text fontSize="xl" my={5}>
       Welcome to your new Gatsby site.

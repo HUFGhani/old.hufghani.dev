@@ -8,7 +8,7 @@ module.exports = {
   siteLanguage: `en`, // Language Tag on <html> element
   // JSONLD / Manifest
   shortName: `HUFGHANI`, // shortname for manifest. MUST be shorter than 12 characters
-  author: `Hamza Ghani`, // Author for schemaORGJSONLD
+  author: `Hamza Umar Farooq Ghani`, // Author for schemaORGJSONLD
   twitter: `@the_ghani`, // Twitter Username
   backgroundColor: `#d3e0ff`,
 }

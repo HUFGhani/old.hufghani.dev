@@ -16,7 +16,7 @@ const SEO: React.FC<SEOProps> = ({ pageTitle }) => {
       <meta name="description" content={data.description} />
       <meta name="apple-mobile-web-app-title" content={data.shortName} />
       <meta name="application-name" content={data.shortName} />
-      <meta name="author" content="Hamza Umar Farooq Ghani"></meta>
+      <meta name="author" content={data.author}></meta>
 
       <meta property="og:url" content={data.url} />
       <meta property="og:title" content={pageTitle} />

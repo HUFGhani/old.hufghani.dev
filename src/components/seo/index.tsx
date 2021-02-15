@@ -19,12 +19,12 @@ const SEO: React.FC<SEOProps> = ({ pageTitle }) => {
       <meta name="author" content="Hamza Umar Farooq Ghani"></meta>
 
       <meta property="og:url" content={data.url} />
-      <meta property="og:title" content={siteTitle} />
+      <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={data.description} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={data.twitter} />
-      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={data.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     </Helmet>

@@ -45,5 +45,17 @@ module.exports = {
         isUsingColorMode: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-minify-html`,
+      options: {
+        debug: true, // debug optional, default false
+      },
+    },
+    {
+      resolve: `gatsby-plugin-brotli`,
+      options: {
+        extensions: [`css`, `html`, `js`, `svg`],
+      },
+    },
   ],
 }

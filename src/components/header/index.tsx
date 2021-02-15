@@ -45,7 +45,7 @@ const Header = () => {
         >
           <MenuItems to="/">Home</MenuItems>
           <MenuItems to="/">Home</MenuItems>
-          <MenuItems to="/pricing" isLast>
+          <MenuItems to="/" isLast>
             Pricing
           </MenuItems>
         </Flex>

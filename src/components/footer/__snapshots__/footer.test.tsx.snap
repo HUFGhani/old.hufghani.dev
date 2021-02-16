@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer/> should render Footer 1`] = `
+<DocumentFragment>
+  <footer
+    class="css-12pe2qd"
+  >
+    <p
+      aria-label="© 2017 - 2021, Hamza Umar Farooq Ghani"
+      class="chakra-text css-0"
+      data-testid="copyRight-year"
+    >
+      © 2017 - 2021, Hamza Umar Farooq Ghani
+    </p>
+  </footer>
+</DocumentFragment>
+`;

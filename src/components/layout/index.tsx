@@ -11,6 +11,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const testdata = useSEO()
+  console.log(testdata)
   return (
     <SEOContext.Provider value={testdata}>
       <Header />

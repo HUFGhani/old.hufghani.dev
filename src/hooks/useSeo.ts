@@ -1,24 +1,7 @@
 import { useStaticQuery, graphql } from 'gatsby'
+import SEOInterface from '../interface/seoInterface'
 
-interface SEO {
-  data: {
-    site: {
-      siteMetadata: {
-        author: string
-        url: string
-        twitter: string
-        titleAlt: string
-        siteUrl: string
-        siteLanguage: string
-        shortName: string
-        pathPrefix: string
-        description: string
-      }
-    }
-  }
-}
-
-const useSEO = (): SEO => {
+const useSEO = (): SEOInterface => {
   const { site } = useStaticQuery(
     graphql`
       query SiteMetaData {

@@ -31,7 +31,7 @@ const Header = () => {
     >
       <Flex align="center">{/* <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} /> */}</Flex>
 
-      <Box display={{ base: `block`, md: `none` }} onClick={toggleMenu}>
+      <Box data-testid="icons-button" display={{ base: `block`, md: `none` }} onClick={toggleMenu}>
         {show ? <CloseIcon /> : <HamburgerIcon />}
       </Box>
 

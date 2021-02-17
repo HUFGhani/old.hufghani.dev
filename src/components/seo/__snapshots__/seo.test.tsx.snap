@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SEO/> should render siteTitle 1`] = `
+NodeList [
+  <meta
+    charset="utf-8"
+    data-react-helmet="true"
+  />,
+  <meta
+    content="personal Website"
+    data-react-helmet="true"
+    name="description"
+  />,
+  <meta
+    content="HUFGHANI"
+    data-react-helmet="true"
+    name="apple-mobile-web-app-title"
+  />,
+  <meta
+    content="HUFGHANI"
+    data-react-helmet="true"
+    name="application-name"
+  />,
+  <meta
+    content="Hamza Umar Farooq Ghani"
+    data-react-helmet="true"
+    name="author"
+  />,
+  <meta
+    content="https://hufghani.dev"
+    data-react-helmet="true"
+    property="og:url"
+  />,
+  <meta
+    content="Hello World"
+    data-react-helmet="true"
+    property="og:title"
+  />,
+  <meta
+    content="personal Website"
+    data-react-helmet="true"
+    property="og:description"
+  />,
+  <meta
+    content="summary_large_image"
+    data-react-helmet="true"
+    name="twitter:card"
+  />,
+  <meta
+    content="@the_ghani"
+    data-react-helmet="true"
+    name="twitter:creator"
+  />,
+  <meta
+    content="Hello World"
+    data-react-helmet="true"
+    name="twitter:title"
+  />,
+  <meta
+    content="personal Website"
+    data-react-helmet="true"
+    name="twitter:description"
+  />,
+  <meta
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    data-react-helmet="true"
+    name="viewport"
+  />,
+]
+`;

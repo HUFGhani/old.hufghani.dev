@@ -12,6 +12,11 @@ exports[`<Footer/> should render Footer 1`] = `
     >
       © 2017 - 2021, Hamza Umar Farooq Ghani
     </p>
+    <p
+      class="chakra-text css-0"
+    >
+      Built with Gatsby · Hosted on S3 and CloudFront
+    </p>
   </footer>
 </DocumentFragment>
 `;

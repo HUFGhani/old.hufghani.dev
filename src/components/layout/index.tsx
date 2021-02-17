@@ -1,4 +1,4 @@
-import { Box, Flex, Link } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { SEOContext } from '../../contexts/seoContext'
 import useSEO from '../../hooks/useSeo'
@@ -11,7 +11,6 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const testdata = useSEO()
-  console.log(testdata)
   return (
     <SEOContext.Provider value={testdata}>
       <Header />

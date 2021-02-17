@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> should render Footer 1`] = `
+<DocumentFragment>
+  <nav
+    class="css-t3h137"
+  >
+    <div
+      class="css-70qvj9"
+    />
+    <div
+      class="css-dsyim5"
+      data-testid="icons-button"
+    >
+      <svg
+        class="chakra-icon css-onkibi"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
+    <div
+      class="css-8olkqp"
+    >
+      <div
+        class="css-g1xn87"
+      >
+        <p
+          class="chakra-text css-n7rqg5"
+        >
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </p>
+        <p
+          class="chakra-text css-n7rqg5"
+        >
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </p>
+        <p
+          class="chakra-text css-1g5pnks"
+        >
+          <a
+            href="/"
+          >
+            Pricing
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

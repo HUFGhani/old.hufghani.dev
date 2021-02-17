@@ -23,4 +23,11 @@ describe(`<Footer/>`, () => {
       `© 2017 - ${new Date().getFullYear()}, Hamza Umar Farooq Ghani`
     )
   })
+
+  it(`should render the copyright text correctly with aria-labal`, () => {
+    const { getByLabelText } = renderFooter()
+    expect(getByLabelText(`© 2017 - 2021, Hamza Umar Farooq Ghani`)).toHaveTextContent(
+      `© 2017 - ${new Date().getFullYear()}, Hamza Umar Farooq Ghani`
+    )
+  })
 })

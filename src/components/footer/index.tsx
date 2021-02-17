@@ -9,6 +9,8 @@ const Footer: React.FC = () => {
       <Text aria-label={`© 2017 - ${new Date().getFullYear()}, ${data?.author}`} data-testid="copyRight-year">
         © 2017 - {new Date().getFullYear()}, {data?.author}
       </Text>
+      {/* add icon for socal media */}
+      <Text>Built with Gatsby · Hosted on S3 and CloudFront</Text>
     </Box>
   )
 }

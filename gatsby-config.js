@@ -14,7 +14,7 @@ module.exports = {
         name: config.title,
         short_name: config.shortName,
         description: config.description,
-        start_url: config.url,
+        start_url: `/?source=pwa`,
         background_color: config.backgroundColor,
         display: `standalone`,
         icon: `src/images/icon.png`,
@@ -55,6 +55,15 @@ module.exports = {
       resolve: `gatsby-plugin-brotli`,
       options: {
         extensions: [`css`, `html`, `js`, `svg`],
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.hufghani.dev',
+        sitemap: 'https://www.hufghani.dev/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
   ],

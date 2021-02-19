@@ -1,7 +1,9 @@
 import { Box, Flex } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { SEOContext } from '../../contexts/seoContext'
+import { SocialMediaContext } from '../../contexts/socialMediaContext'
 import useSEO from '../../hooks/useSeo'
+import useSocialMedia from '../../hooks/useSocialMedia'
 import Footer from '../footer'
 import Header from './../header'
 
@@ -10,9 +12,10 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const testdata = useSEO()
+  const seodata = useSEO()
+  const socialMediaData = useSocialMedia()
   return (
-    <SEOContext.Provider value={testdata}>
+    <SEOContext.Provider value={seodata}>
       <Header />
       <Flex direction="column" align="center" maxW={{ xl: `1200px` }} m="0 auto">
         <Box
@@ -25,7 +28,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         >
           <Box as="main">{children}</Box>
         </Box>
-        <Footer />
+        <SocialMediaContext.Provider value={socialMediaData}>
+          <Footer />
+        </SocialMediaContext.Provider>
       </Flex>
     </SEOContext.Provider>
   )

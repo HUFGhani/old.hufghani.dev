@@ -1,8 +1,12 @@
 /* eslint-disable */
 const config = require(`./config/site`)
+const socialMedia = require(`./config/socialMedia`)
 module.exports = {
   siteMetadata: {
     ...config,
+    socialMedia: {
+      ...socialMedia,
+    },
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -66,5 +70,6 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    `gatsby-plugin-react-svg`,
   ],
 }

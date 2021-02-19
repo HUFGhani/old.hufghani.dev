@@ -2,12 +2,15 @@ import { render } from '@testing-library/react'
 import React from 'react'
 import Footer from '.'
 import { SEOContext } from '../../contexts/seoContext'
-import { SiteMetaData } from '../../stub'
+import { SocialMediaContext } from '../../contexts/socialMediaContext'
+import { SiteMetaData, SocialMediaData } from '../../stub'
 
 function renderFooter() {
   return render(
     <SEOContext.Provider value={SiteMetaData}>
-      <Footer />
+      <SocialMediaContext.Provider value={SocialMediaData}>
+        <Footer />
+      </SocialMediaContext.Provider>
     </SEOContext.Provider>
   )
 }

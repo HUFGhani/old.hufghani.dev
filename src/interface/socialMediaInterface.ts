@@ -1,8 +1,8 @@
 interface SocialMediaInterface {
-  github: String
-  instagram: String
-  twitter: String
-  linkedin: String
+  github: string
+  instagram: string
+  twitter: string
+  linkedin: string
 }
 
 export default SocialMediaInterface

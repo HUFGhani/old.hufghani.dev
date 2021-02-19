@@ -16,18 +16,18 @@ const Footer: React.FC = () => {
       <Text aria-label={`© 2017 - ${new Date().getFullYear()}, ${seodata?.author}`} data-testid="copyRight-year">
         © 2017 - {new Date().getFullYear()}, {seodata?.author}
       </Text>
-      <Flex alignItems="center" flexDirection="row" justifyContent="center" pt={'1rem'} pb={'1rem'}>
-        <Box mr={'1rem'}>
+      <Flex alignItems="center" flexDirection="row" justifyContent="center" pt={`1rem`} pb={`1rem`}>
+        <Box mr={`1rem`}>
           <Link to={socialMediadata?.github}>
             <Github width="25px" height="25px" />
           </Link>
         </Box>
-        <Box mr={'1rem'}>
+        <Box mr={`1rem`}>
           <Link to={socialMediadata?.linkedin}>
             <Linkedin width="25px" height="25px" />
           </Link>
         </Box>
-        <Box mr={'1rem'}>
+        <Box mr={`1rem`}>
           <Link to={socialMediadata?.instagram}>
             <Instagram width="30px" height="30px" />
           </Link>

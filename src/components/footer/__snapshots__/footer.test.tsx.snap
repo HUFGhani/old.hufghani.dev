@@ -19,7 +19,10 @@ exports[`<Footer/> should render Footer 1`] = `
         class="css-1kr4fmq"
       >
         <a
+          class="chakra-link css-94rmf3"
           href="https://github.com/HUFGhani"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <test-file-stub
             height="25px"
@@ -31,7 +34,10 @@ exports[`<Footer/> should render Footer 1`] = `
         class="css-1kr4fmq"
       >
         <a
+          class="chakra-link css-94rmf3"
           href="https://www.linkedin.com/in/hamza-u-f-ghani/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <test-file-stub
             height="25px"
@@ -43,7 +49,10 @@ exports[`<Footer/> should render Footer 1`] = `
         class="css-1kr4fmq"
       >
         <a
+          class="chakra-link css-94rmf3"
           href="https://www.instagram.com/the.ghani/"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <test-file-stub
             height="30px"
@@ -55,7 +64,10 @@ exports[`<Footer/> should render Footer 1`] = `
         class="css-0"
       >
         <a
+          class="chakra-link css-94rmf3"
           href="https://twitter.com/the_ghani"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           <test-file-stub
             height="25px"
@@ -67,7 +79,7 @@ exports[`<Footer/> should render Footer 1`] = `
     <p
       class="chakra-text css-0"
     >
-      Built with Gatsby · Hosted on S3 and CloudFront
+      Built with Gatsby · Hosted on S3 and distributed by CloudFront
     </p>
   </footer>
 </DocumentFragment>

@@ -1,10 +1,20 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
+import {
+  Box,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  IconButton,
+  Text,
+  useDisclosure,
+} from '@chakra-ui/react'
+import { useFeatures } from '@paralleldrive/react-feature-toggles'
 import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
-
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
-import { useFeatures } from '@paralleldrive/react-feature-toggles'
 import { featureIsActive } from '../../utils'
+import ThemeToggle from '../theme-toggle'
 
 const MenuItems = (props: { [x: string]: any; children: string; isLast?: boolean; to?: string | undefined }) => {
   const { children, isLast, to = `/`, ...rest } = props
@@ -23,7 +33,7 @@ const Header = () => {
   return (
     <>
       {featureIsActive(features, `headerNavBar`) ? (
-        <Box></Box>
+        <DrawerNavMenu />
       ) : (
         <Flex
           as="nav"
@@ -61,6 +71,43 @@ const Header = () => {
         </Flex>
       )}
     </>
+  )
+}
+
+const DrawerNavMenu = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const handleClick = () => {
+    onOpen()
+  }
+  return (
+    <Flex as="nav" align="center" justify="space-between" wrap="wrap" width="100%" mb={8} p={8} bg={[`transparent`]}>
+      <Flex align="center">{/* <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} /> */}</Flex>
+      <IconButton icon={<HamburgerIcon />} variant="ghost" aria-label="Hamburger Menu" onClick={() => handleClick()} />
+      <Drawer onClose={onClose} isOpen={isOpen} size={`xs`}>
+        <DrawerOverlay>
+          <DrawerContent>
+            <Flex justify="space-between" wrap="wrap" width="100%" mb={8} p={8} flex-wrap="wrap">
+              <ThemeToggle />
+              <IconButton icon={<CloseIcon />} variant="ghost" aria-label="Close" onClick={onClose} />
+            </Flex>
+            <DrawerBody>
+              <Flex
+                align={[`center`, `center`, `center`, `center`]}
+                justify={[`center`, `space-between`, `flex-end`, `flex-end`]}
+                direction={[`column`, `row`, `row`, `row`]}
+                pt={[4, 4, 0, 0]}
+              >
+                <MenuItems to="/">Home</MenuItems>
+                <MenuItems to="/">Home</MenuItems>
+                <MenuItems to="/" isLast>
+                  Pricing
+                </MenuItems>
+              </Flex>
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
+      </Drawer>
+    </Flex>
   )
 }
 

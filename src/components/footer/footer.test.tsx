@@ -1,3 +1,4 @@
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
 import { render } from '@testing-library/react'
 import React from 'react'
 import Footer from '.'
@@ -7,11 +8,14 @@ import { SiteMetaData, SocialMediaData } from '../../stub'
 
 function renderFooter() {
   return render(
-    <SEOContext.Provider value={SiteMetaData}>
-      <SocialMediaContext.Provider value={SocialMediaData}>
-        <Footer />
-      </SocialMediaContext.Provider>
-    </SEOContext.Provider>
+    <ChakraProvider>
+      <CSSReset />
+      <SEOContext.Provider value={SiteMetaData}>
+        <SocialMediaContext.Provider value={SocialMediaData}>
+          <Footer />
+        </SocialMediaContext.Provider>
+      </SEOContext.Provider>
+    </ChakraProvider>
   )
 }
 

@@ -98,7 +98,6 @@ const DrawerNavMenu = () => {
                 pt={[4, 4, 0, 0]}
               >
                 <MenuItems to="/">Home</MenuItems>
-                <MenuItems to="/">Home</MenuItems>
                 <MenuItems to="/" isLast>
                   Pricing
                 </MenuItems>

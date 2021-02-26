@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Header/> should render Footer 1`] = `
+exports[`<Header/> with feature flag off should render Header 1`] = `
 <DocumentFragment>
   <nav
-    class="css-t3h137"
+    class="css-7z4tkp"
   >
     <div
       class="css-70qvj9"
     />
     <div
-      class="css-dsyim5"
+      class="css-259i0c"
       data-testid="icons-button"
     >
       <svg
@@ -24,13 +24,13 @@ exports[`<Header/> should render Footer 1`] = `
       </svg>
     </div>
     <div
-      class="css-8olkqp"
+      class="css-1w6q9gu"
     >
       <div
-        class="css-g1xn87"
+        class="css-h2sc4b"
       >
         <p
-          class="chakra-text css-n7rqg5"
+          class="chakra-text css-y151e5"
         >
           <a
             href="/"
@@ -39,7 +39,7 @@ exports[`<Header/> should render Footer 1`] = `
           </a>
         </p>
         <p
-          class="chakra-text css-n7rqg5"
+          class="chakra-text css-y151e5"
         >
           <a
             href="/"
@@ -48,7 +48,7 @@ exports[`<Header/> should render Footer 1`] = `
           </a>
         </p>
         <p
-          class="chakra-text css-1g5pnks"
+          class="chakra-text css-oluruq"
         >
           <a
             href="/"
@@ -58,6 +58,35 @@ exports[`<Header/> should render Footer 1`] = `
         </p>
       </div>
     </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`<Header/> with feature flag on should render Header 1`] = `
+<DocumentFragment>
+  <nav
+    class="css-2abocj"
+  >
+    <div
+      class="css-70qvj9"
+    />
+    <button
+      aria-label="Hamburger Menu"
+      class="chakra-button css-j47tpi"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="chakra-icon css-onkibi"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
   </nav>
 </DocumentFragment>
 `;

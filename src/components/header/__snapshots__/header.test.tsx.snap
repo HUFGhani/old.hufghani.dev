@@ -30,7 +30,7 @@ exports[`<Header/> with feature flag off should render Header 1`] = `
         class="css-h2sc4b"
       >
         <p
-          class="chakra-text css-y151e5"
+          class="chakra-text css-mobtzs"
         >
           <a
             href="/"
@@ -39,7 +39,7 @@ exports[`<Header/> with feature flag off should render Header 1`] = `
           </a>
         </p>
         <p
-          class="chakra-text css-y151e5"
+          class="chakra-text css-mobtzs"
         >
           <a
             href="/"
@@ -48,7 +48,7 @@ exports[`<Header/> with feature flag off should render Header 1`] = `
           </a>
         </p>
         <p
-          class="chakra-text css-oluruq"
+          class="chakra-text css-1gxxphu"
         >
           <a
             href="/"

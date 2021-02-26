@@ -19,7 +19,7 @@ import ThemeToggle from '../theme-toggle'
 const MenuItems = (props: { [x: string]: any; children: string; isLast?: boolean; to?: string | undefined }) => {
   const { children, isLast, to = `/`, ...rest } = props
   return (
-    <Text mb={{ base: isLast ? 0 : 8, sm: 0 }} mr={{ base: 0, sm: isLast ? 0 : 8 }} display="block" {...rest}>
+    <Text mb={{ base: isLast ? 0 : 8 }} mr={{ base: 0 }} display="block" {...rest}>
       <GatsbyLink to={to}>{children}</GatsbyLink>
     </Text>
   )
@@ -91,15 +91,10 @@ const DrawerNavMenu = () => {
               <IconButton icon={<CloseIcon />} variant="ghost" aria-label="Close" onClick={onClose} />
             </Flex>
             <DrawerBody>
-              <Flex
-                align={[`center`, `center`, `center`, `center`]}
-                justify={[`center`, `space-between`, `flex-end`, `flex-end`]}
-                direction={[`column`, `row`, `row`, `row`]}
-                pt={[4, 4, 0, 0]}
-              >
+              <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={'justify'}>
                 <MenuItems to="/">Home</MenuItems>
                 <MenuItems to="/" isLast>
-                  Pricing
+                  Project
                 </MenuItems>
               </Flex>
             </DrawerBody>

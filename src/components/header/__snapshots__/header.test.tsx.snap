@@ -72,12 +72,12 @@ exports[`<Header/> with feature flag on should render Header 1`] = `
     />
     <button
       aria-label="Hamburger Menu"
-      class="chakra-button css-j47tpi"
+      class="chakra-button css-8fikp"
       type="button"
     >
       <svg
         aria-hidden="true"
-        class="chakra-icon css-onkibi"
+        class="chakra-icon css-nikkw0"
         focusable="false"
         viewBox="0 0 24 24"
       >

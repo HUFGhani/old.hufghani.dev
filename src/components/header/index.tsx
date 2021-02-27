@@ -82,13 +82,19 @@ const DrawerNavMenu = () => {
   return (
     <Flex as="nav" align="center" justify="space-between" wrap="wrap" width="100%" mb={8} p={8} bg={[`transparent`]}>
       <Flex align="center">{/* <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} /> */}</Flex>
-      <IconButton icon={<HamburgerIcon />} variant="ghost" aria-label="Hamburger Menu" onClick={() => handleClick()} />
+      <IconButton
+        icon={<HamburgerIcon w={6} h={6} />}
+        variant="ghost"
+        aria-label="Hamburger Menu"
+        onClick={() => handleClick()}
+        size={'lg'}
+      />
       <Drawer onClose={onClose} isOpen={isOpen} size={`xs`}>
         <DrawerOverlay>
           <DrawerContent>
             <Flex justify="space-between" wrap="wrap" width="100%" mb={8} p={8} flex-wrap="wrap">
               <ThemeToggle />
-              <IconButton icon={<CloseIcon />} variant="ghost" aria-label="Close" onClick={onClose} />
+              <IconButton icon={<CloseIcon />} variant="ghost" aria-label="Close" onClick={onClose} size={'lg'} />
             </Flex>
             <DrawerBody>
               <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={'justify'}>

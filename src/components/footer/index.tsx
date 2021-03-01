@@ -1,13 +1,11 @@
 import { Box, Flex, Link, Text } from '@chakra-ui/react'
-import loadable from '@loadable/component'
 import React from 'react'
 import { useSEOContext } from '../../contexts/seoContext'
 import { useSocialMediaContext } from '../../contexts/socialMediaContext'
-
-const Github = loadable(() => import('../../images/socialMedia/github.svg'))
-const Instagram = loadable(() => import('../../images/socialMedia/instagram.svg'))
-const Linkedin = loadable(() => import('../../images/socialMedia/linkedin.svg'))
-const Twitter = loadable(() => import(' ../../images/socialMedia/twitter.svg'))
+import Github from '../../images/socialMedia/github.svg'
+import Instagram from '../../images/socialMedia/instagram.svg'
+import Linkedin from '../../images/socialMedia/linkedin.svg'
+import Twitter from '../../images/socialMedia/twitter.svg'
 
 const Footer: React.FC = () => {
   const seodata = useSEOContext()

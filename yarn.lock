@@ -992,6 +992,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.7.7":
+  version "7.13.8"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.8.tgz#cc886a85c072df1de23670dc1aa59fc116c4017c"
+  integrity sha512-CwQljpw6qSayc0fRG1soxHAKs1CnQMOChm4mlQP6My0kf9upVGizj/KhlTTgyUnETmHpcUXjaluNAkteRFuafg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.12.6":
   version "7.12.15"
   resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.12.15.tgz#fade4ccb2af79c53300b8e71f4c1f0ecf59123e2"
@@ -2362,6 +2369,15 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
+"@loadable/component@^5.14.1":
+  version "5.14.1"
+  resolved "https://registry.yarnpkg.com/@loadable/component/-/component-5.14.1.tgz#cacd807162430bb85ae085945318027a600adc85"
+  integrity sha512-UQBZfZrp1FLTf8RNhljXNHFNY4QhAA1L2+GOEeABBFre9TD0aFyQh3Sai5QxcOfy+FTbjIfti5iHaNRR7yUzEQ==
+  dependencies:
+    "@babel/runtime" "^7.7.7"
+    hoist-non-react-statics "^3.3.1"
+    react-is "^16.12.0"
+
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"
@@ -2802,6 +2818,13 @@
   integrity sha512-MPtoySlAZQ37VoLaPcTHCu1RWJ4llDkULYZIzOYxlhxBqYPB0RsRlmMU0R6tahtFe27mIdkHV+551ZWV4PLmVw==
   dependencies:
     "@types/node" "*"
+
+"@types/loadable__component@^5.13.3":
+  version "5.13.3"
+  resolved "https://registry.yarnpkg.com/@types/loadable__component/-/loadable__component-5.13.3.tgz#ea620b218fb2b6744ce5b2efd9a6a5c1a525a021"
+  integrity sha512-nkRRYpKxspH9yiYGSvyfM7GX1m57B9AVMrVEWY7Hlv9ueK2XCu39M5QyBTDHXcj5qixdD+MyAmNgoy2dEDxGLQ==
+  dependencies:
+    "@types/react" "*"
 
 "@types/lodash.mergewith@4.6.6":
   version "4.6.6"

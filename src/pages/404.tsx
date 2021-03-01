@@ -1,6 +1,7 @@
 import { Heading, Text } from '@chakra-ui/react'
+import loadable from '@loadable/component'
 import React from 'react'
-import SEO from '../components/seo'
+const SEO = loadable(() => import('../components/seo'))
 
 const NotFoundPage: React.FC = () => (
   <>

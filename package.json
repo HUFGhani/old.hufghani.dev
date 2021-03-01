@@ -48,8 +48,10 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@loadable/component": "^5.14.1",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
+    "@types/loadable__component": "^5.13.3",
     "@types/node": "^14.14.25",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",

@@ -1,11 +1,13 @@
 import { Box, Flex, Link, Text } from '@chakra-ui/react'
+import loadable from '@loadable/component'
 import React from 'react'
 import { useSEOContext } from '../../contexts/seoContext'
 import { useSocialMediaContext } from '../../contexts/socialMediaContext'
-import Github from '../../images/socialMedia/github.svg'
-import Instagram from '../../images/socialMedia/instagram.svg'
-import Linkedin from '../../images/socialMedia/linkedin.svg'
-import Twitter from '../../images/socialMedia/twitter.svg'
+
+const Github = loadable(() => import('../../images/socialMedia/github.svg'))
+const Instagram = loadable(() => import('../../images/socialMedia/instagram.svg'))
+const Linkedin = loadable(() => import('../../images/socialMedia/linkedin.svg'))
+const Twitter = loadable(() => import(' ../../images/socialMedia/twitter.svg'))
 
 const Footer: React.FC = () => {
   const seodata = useSEOContext()
@@ -25,22 +27,22 @@ const SocialMedia: React.FC = () => {
   return (
     <Flex alignItems="center" flexDirection="row" justifyContent="center" pt={`1rem`} pb={`1rem`}>
       <Box mr={`1rem`}>
-        <Link href={socialMediadata?.github} isExternal textDecoration="none" _focus="none">
+        <Link href={socialMediadata?.github} isExternal textDecoration="none" _focus="none" aria-label="GitHub">
           <Github width="25px" height="25px" />
         </Link>
       </Box>
       <Box mr={`1rem`}>
-        <Link href={socialMediadata?.linkedin} isExternal textDecoration="none" _focus="none">
+        <Link href={socialMediadata?.linkedin} isExternal textDecoration="none" _focus="none" aria-label="Linkedin">
           <Linkedin width="25px" height="25px" />
         </Link>
       </Box>
       <Box mr={`1rem`}>
-        <Link href={socialMediadata?.instagram} isExternal textDecoration="none" _focus="none">
+        <Link href={socialMediadata?.instagram} isExternal textDecoration="none" _focus="none" aria-label="Instagram">
           <Instagram width="30px" height="30px" />
         </Link>
       </Box>
       <Box>
-        <Link href={socialMediadata?.twitter} isExternal textDecoration="none" _focus="none">
+        <Link href={socialMediadata?.twitter} isExternal textDecoration="none" _focus="none" aria-label="Twitter">
           <Twitter width="25px" height="25px" />
         </Link>
       </Box>

@@ -19,61 +19,45 @@ exports[`<Footer/> should render Footer 1`] = `
         class="css-1kr4fmq"
       >
         <a
+          aria-label="GitHub"
           class="chakra-link css-176saw2"
           href="https://github.com/HUFGhani"
           rel="noopener noreferrer"
           target="_blank"
-        >
-          <test-file-stub
-            height="25px"
-            width="25px"
-          />
-        </a>
+        />
       </div>
       <div
         class="css-1kr4fmq"
       >
         <a
+          aria-label="Linkedin"
           class="chakra-link css-176saw2"
           href="https://www.linkedin.com/in/hamza-u-f-ghani/"
           rel="noopener noreferrer"
           target="_blank"
-        >
-          <test-file-stub
-            height="25px"
-            width="25px"
-          />
-        </a>
+        />
       </div>
       <div
         class="css-1kr4fmq"
       >
         <a
+          aria-label="Instagram"
           class="chakra-link css-176saw2"
           href="https://www.instagram.com/the.ghani/"
           rel="noopener noreferrer"
           target="_blank"
-        >
-          <test-file-stub
-            height="30px"
-            width="30px"
-          />
-        </a>
+        />
       </div>
       <div
         class="css-0"
       >
         <a
+          aria-label="Twitter"
           class="chakra-link css-176saw2"
           href="https://twitter.com/the_ghani"
           rel="noopener noreferrer"
           target="_blank"
-        >
-          <test-file-stub
-            height="25px"
-            width="25px"
-          />
-        </a>
+        />
       </div>
     </div>
     <p

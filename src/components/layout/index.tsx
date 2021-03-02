@@ -22,7 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <FeatureToggles features={features}>
       <SEOContext.Provider value={seodata}>
         <Header />
-        <Flex direction="column" align="center" maxW={{ xl: `1200px` }} m="0 auto">
+        <Flex direction="column" align="center" maxW={{ xl: `1200px` }} m="0 auto" justify="center">
           <Box
             as="div"
             margin="0 auto"

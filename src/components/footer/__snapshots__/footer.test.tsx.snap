@@ -81,10 +81,14 @@ exports[`<Footer/> should render Footer 1`] = `
       </div>
     </div>
     <p
-      class="chakra-text css-0"
+      class="chakra-text css-1kch9dj"
     >
       Built with Gatsby · Hosted on S3 and distributed by CloudFront
     </p>
+    <div
+      class="wcb carbonbadge css-0"
+      id="wcb"
+    />
   </footer>
 </DocumentFragment>
 `;

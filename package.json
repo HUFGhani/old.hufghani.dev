@@ -40,6 +40,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sharp": "^2.14.1",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-source-filesystem": "^2.11.0",
     "gatsby-transformer-sharp": "^2.12.0",
     "identity-obj-proxy": "^3.0.0",
@@ -59,6 +60,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "babel-jest": "^26.6.3",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -97,5 +99,12 @@
     "setupFiles": [
       "<rootDir>/loadershim.js"
     ]
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    ">0.2%",
+    "not IE 11",
+    "not IE_Mob 11"
+  ]
 }

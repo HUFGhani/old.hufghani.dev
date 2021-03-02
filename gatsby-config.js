@@ -71,5 +71,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-svg`,
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+      options: {
+        analyzerPort: 3000,
+        production: true,
+      },
+    },
   ],
 }

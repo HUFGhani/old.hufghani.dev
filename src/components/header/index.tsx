@@ -99,7 +99,7 @@ const DrawerNavMenu = () => {
             <DrawerBody>
               <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={'justify'}>
                 <MenuItems to="/">Home</MenuItems>
-                <MenuItems to="/" isLast>
+                <MenuItems to="/project" isLast>
                   Project
                 </MenuItems>
               </Flex>

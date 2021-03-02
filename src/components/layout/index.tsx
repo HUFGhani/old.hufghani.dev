@@ -1,13 +1,14 @@
 import { Box, Flex } from '@chakra-ui/react'
+import loadable from '@loadable/component'
 import { FeatureToggles } from '@paralleldrive/react-feature-toggles'
 import React, { ReactNode } from 'react'
+import FeatureFlags from '../../../config/featureFlags'
 import { SEOContext } from '../../contexts/seoContext'
 import { SocialMediaContext } from '../../contexts/socialMediaContext'
 import useSEO from '../../hooks/useSeo'
 import useSocialMedia from '../../hooks/useSocialMedia'
-import Footer from '../footer'
-import Header from './../header'
-import FeatureFlags from '../../../config/featureFlags'
+const Header = loadable(() => import('./../header'))
+const Footer = loadable(() => import('../footer'))
 
 interface LayoutProps {
   children: ReactNode

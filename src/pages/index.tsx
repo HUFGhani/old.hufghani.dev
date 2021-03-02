@@ -2,7 +2,7 @@ import { Box, Heading, Text } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import React from 'react'
 
-const SEO = loadable(() => import('../components/seo'))
+const SEO = loadable(() => import(`../components/seo`))
 
 const IndexPage: React.FC = () => (
   <>

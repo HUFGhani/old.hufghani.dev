@@ -10,11 +10,13 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react'
-import { useFeatures } from '@paralleldrive/react-feature-toggles'
+import { FeatureNames, useFeatures } from '@paralleldrive/react-feature-toggles'
 import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
 import { featureIsActive } from '../../utils'
 import ThemeToggle from '../theme-toggle'
+
+let features: FeatureNames | { name: string; isActive: boolean }[]
 
 const MenuItems = (props: { [x: string]: any; children: string; isLast?: boolean; to?: string | undefined }) => {
   const { children, isLast, to = `/`, ...rest } = props
@@ -26,55 +28,12 @@ const MenuItems = (props: { [x: string]: any; children: string; isLast?: boolean
 }
 
 const Header = () => {
-  const [show, setShow] = React.useState(false)
-  const toggleMenu = () => setShow(!show)
-  const features = useFeatures()
+  features = useFeatures()
 
-  return (
-    <>
-      {featureIsActive(features, `headerNavBar`) ? (
-        <DrawerNavMenu />
-      ) : (
-        <Flex
-          as="nav"
-          align="center"
-          justify="space-between"
-          wrap="wrap"
-          w="100%"
-          mb={8}
-          p={8}
-          bg={[`red`, `green`, `orange`]}
-          color={[`blue`, `pink`, `purple`]}
-        >
-          <Flex align="center">
-            {/* <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} /> */}
-          </Flex>
-
-          <Box data-testid="icons-button" display={{ base: `block`, md: `none` }} onClick={toggleMenu}>
-            {show ? <CloseIcon /> : <HamburgerIcon />}
-          </Box>
-
-          <Box display={{ base: show ? `block` : `none`, md: `block` }} flexBasis={{ base: `100%`, md: `auto` }}>
-            <Flex
-              align={[`center`, `center`, `center`, `center`]}
-              justify={[`center`, `space-between`, `flex-end`, `flex-end`]}
-              direction={[`column`, `row`, `row`, `row`]}
-              pt={[4, 4, 0, 0]}
-            >
-              <MenuItems to="/">Home</MenuItems>
-              <MenuItems to="/">Home</MenuItems>
-              <MenuItems to="/" isLast>
-                Pricing
-              </MenuItems>
-            </Flex>
-          </Box>
-        </Flex>
-      )}
-    </>
-  )
+  return <>{featureIsActive(features, `headerNavBar`) ? <DrawerNavMenu /> : <OldNavMenu />}</>
 }
 
-const DrawerNavMenu = () => {
+const DrawerNavMenu: React.FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const handleClick = () => {
     onOpen()
@@ -87,26 +46,75 @@ const DrawerNavMenu = () => {
         variant="ghost"
         aria-label="Hamburger Menu"
         onClick={() => handleClick()}
-        size={'lg'}
+        size={`lg`}
       />
       <Drawer onClose={onClose} isOpen={isOpen} size={`xs`}>
         <DrawerOverlay>
           <DrawerContent>
             <Flex justify="space-between" wrap="wrap" width="100%" mb={8} p={8} flex-wrap="wrap">
               <ThemeToggle />
-              <IconButton icon={<CloseIcon />} variant="ghost" aria-label="Close" onClick={onClose} size={'lg'} />
+              <IconButton icon={<CloseIcon />} variant="ghost" aria-label="Close" onClick={onClose} size={`lg`} />
             </Flex>
             <DrawerBody>
-              <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={'justify'}>
-                <MenuItems to="/">Home</MenuItems>
-                <MenuItems to="/project" isLast>
-                  Project
-                </MenuItems>
+              <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={`justify`}>
+                {featureIsActive(features, `projectPage`) ? (
+                  <>
+                    <MenuItems to="/">Home</MenuItems>
+                    <MenuItems to="/project" isLast>
+                      Project
+                    </MenuItems>
+                  </>
+                ) : (
+                  <>
+                    <MenuItems to="/" isLast>
+                      Home
+                    </MenuItems>
+                  </>
+                )}
               </Flex>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
+    </Flex>
+  )
+}
+
+const OldNavMenu: React.FC = () => {
+  const [show, setShow] = React.useState(false)
+  const toggleMenu = () => setShow(!show)
+  return (
+    <Flex
+      as="nav"
+      align="center"
+      justify="space-between"
+      wrap="wrap"
+      w="100%"
+      mb={8}
+      p={8}
+      bg={[`red`, `green`, `orange`]}
+      color={[`blue`, `pink`, `purple`]}
+    >
+      <Flex align="center">{/* <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} /> */}</Flex>
+
+      <Box data-testid="icons-button" display={{ base: `block`, md: `none` }} onClick={toggleMenu}>
+        {show ? <CloseIcon /> : <HamburgerIcon />}
+      </Box>
+
+      <Box display={{ base: show ? `block` : `none`, md: `block` }} flexBasis={{ base: `100%`, md: `auto` }}>
+        <Flex
+          align={[`center`, `center`, `center`, `center`]}
+          justify={[`center`, `space-between`, `flex-end`, `flex-end`]}
+          direction={[`column`, `row`, `row`, `row`]}
+          pt={[4, 4, 0, 0]}
+        >
+          <MenuItems to="/">Home</MenuItems>
+          <MenuItems to="/">Home</MenuItems>
+          <MenuItems to="/" isLast>
+            Pricing
+          </MenuItems>
+        </Flex>
+      </Box>
     </Flex>
   )
 }

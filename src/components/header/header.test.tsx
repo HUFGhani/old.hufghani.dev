@@ -36,15 +36,15 @@ describe(`<Header/> with feature flag on`, () => {
 
   it(`should render the drawer menu when the hambuger menu is press`, () => {
     const { getByLabelText, getByText } = renderHeader(featureOn)
-    fireEvent.click(getByLabelText('Hamburger Menu'))
-    expect(getByText('Home')).toBeTruthy()
+    fireEvent.click(getByLabelText(`Hamburger Menu`))
+    expect(getByText(`Home`)).toBeTruthy()
   })
 
   it(`should render correctly and switch the theme from light to dark`, () => {
     const { getByLabelText } = renderHeader(featureOn)
-    expect(document.querySelector('body')).toHaveClass('chakra-ui-light')
-    fireEvent.click(getByLabelText('Hamburger Menu'))
-    fireEvent.click(getByLabelText('Toggle Theme'))
-    expect(document.querySelector('body')).toHaveClass('chakra-ui-dark')
+    expect(document.querySelector(`body`)).toHaveClass(`chakra-ui-light`)
+    fireEvent.click(getByLabelText(`Hamburger Menu`))
+    fireEvent.click(getByLabelText(`Toggle Theme`))
+    expect(document.querySelector(`body`)).toHaveClass(`chakra-ui-dark`)
   })
 })

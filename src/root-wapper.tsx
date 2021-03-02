@@ -1,7 +1,7 @@
 import { ChakraProvider, CSSReset } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import React, { ReactNode } from 'react'
-const Layout = loadable(() => import('./components/layout'))
+const Layout = loadable(() => import(`./components/layout`))
 
 interface WrapPageElementProps {
   element: ReactNode

@@ -9,15 +9,20 @@ import { contributions } from '../utils'
 const ProjectTable = loadable(() => import(`../components/projectTable`))
 const SEO = loadable(() => import(`../components/seo`))
 
+const useLocal = process.env.NODE_ENV !== 'production'
+const url = useLocal
+  ? `http://localhost:4566/restapis/ak0gie1kwg/local/_user_request_/github/contributions`
+  : `https://api.hufghani.dev/github/contributions`
+
 const Projects: React.FC = () => {
-  const [state] = useAPI(`https://api.hufghani.dev/github/contributions`, [])
+  const [state] = useAPI(url, [])
   let weeks = []
   if (state.isLoading === false && state.response.message === 'success') {
     weeks = state.response.data.weeks
   }
   const { colorMode } = useColorMode()
   const isDark = colorMode === `light` ? `Dark` : `Light`
-
+ 
   return (
     <>
       <SEO pageTitle="Project" />
@@ -27,14 +32,23 @@ const Projects: React.FC = () => {
       {/* <ProjectTable /> */}
       <Skeleton isLoaded={!state.isLoading}>
         <Box
-          overflow={'hidden'}
-          border={'1px solid'}
-          borderRadius={'5px'}
-          marginTop={'60px'}
-          height={'320px'}
-          width={'100%'}
+          maxW={['xs', 'lg', 'xl', '850px']}
+          width="150%"
+          borderWidth="1px"
+          borderRadius="lg"
+          overflow="hidden"
+          overflowX="auto"
+          height="320px"
+          position="relative"
+          right={{ md: '22%' }}
         >
-          <Box id="a" height="400px" margin={'-60px auto'} position={'initial'} maxWidth={'800px'} width={'200%'}>
+          <Box
+            position="relative"
+            maxW={['xl', 'xl', '60rem', '60rem']}
+            width={['lg', 'lg', 'xl', '40rem']}
+            height="400px"
+            margin="-60px auto"
+          >
             <ResponsiveCalendarCanvas
               data={contributions(weeks)}
               from={subWeeks(new Date(Date.now()), 49).toISOString()}

@@ -22,5 +22,5 @@ export const contributions = (weeks: any) => {
     arrayOfDays.push(days)
   }
   console.log(arrayOfDays)
-  return [].concat.apply([], arrayOfDays)
+  return [].concat([], ...arrayOfDays)
 }

@@ -81,7 +81,7 @@ exports[`<Footer/> should render Footer 1`] = `
       </div>
     </div>
     <p
-      class="chakra-text css-1kch9dj"
+      class="chakra-text css-1fgid3w"
     >
       Built with Gatsby · Hosted on S3 and distributed by CloudFront
     </p>

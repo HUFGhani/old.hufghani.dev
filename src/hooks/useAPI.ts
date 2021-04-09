@@ -3,20 +3,20 @@ import { useEffect, useReducer, useState } from 'react'
 
 const dataFetchReducer = (state: any, action: { type: any; payload: any }) => {
   switch (action.type) {
-    case 'FETCH_INIT':
+    case `FETCH_INIT`:
       return {
         ...state,
         isLoading: true,
         isError: false,
       }
-    case 'FETCH_SUCCESS':
+    case `FETCH_SUCCESS`:
       return {
         ...state,
         isLoading: false,
         isError: false,
         response: action.payload,
       }
-    case 'FETCH_FAILURE':
+    case `FETCH_FAILURE`:
       return {
         ...state,
         isLoading: false,
@@ -39,17 +39,17 @@ const useAPI = (initialUrl: string, initialData: never[]) => {
     let didCancel = false
 
     const fetchData = async () => {
-      dispatch({ type: 'FETCH_INIT', payload: [] })
+      dispatch({ type: `FETCH_INIT`, payload: [] })
 
       try {
         const result = await axios(url)
 
         if (!didCancel) {
-          dispatch({ type: 'FETCH_SUCCESS', payload: result.data })
+          dispatch({ type: `FETCH_SUCCESS`, payload: result.data })
         }
       } catch (error) {
         if (!didCancel) {
-          dispatch({ type: 'FETCH_FAILURE', payload: [] })
+          dispatch({ type: `FETCH_FAILURE`, payload: [] })
         }
       }
     }

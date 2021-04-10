@@ -7,14 +7,14 @@ import { contributions } from '../../utils'
 
 const useLocal = process.env.NODE_ENV !== `production`
 const url = useLocal
-  ? `http://localhost:4566/restapis/7eku27v6nk/local/_user_request_/github/contributions`
+  ? `http://localhost:4566/restapis/e90pzbj1uv/local/_user_request_/github/contributions`
   : `https://api.hufghani.dev/github/contributions`
 
 const GithubContributions: React.FC = () => {
   const [state] = useAPI(url, [])
   let weeks = []
   if (state.isLoading === false && state.response.message === `success`) {
-    weeks = state.response.data.weeks
+    weeks = contributions(state.response.data.weeks)
   }
   const { colorMode } = useColorMode()
   const isDark = colorMode === `light` ? `Dark` : `Light`
@@ -38,7 +38,7 @@ const GithubContributions: React.FC = () => {
           margin="-60px auto"
         >
           <ResponsiveCalendarCanvas
-            data={contributions(weeks)}
+            data={weeks}
             from={subWeeks(new Date(Date.now()), 49).toISOString()}
             to={new Date(Date.now()).toISOString()}
             emptyColor={isDark === `Light` ? `#1a202c` : `#f7fafc`}
@@ -50,6 +50,9 @@ const GithubContributions: React.FC = () => {
             dayBorderWidth={2}
             dayBorderColor={isDark === `Light` ? `#2d3748` : `#edf2f7`}
             isInteractive={false}
+            theme={{
+              textColor: isDark === `Light` ? `#f7fafc` : `#1a202c`,
+            }}
           />
         </Box>
       </Box>

@@ -1,11 +1,11 @@
 import { Flex, Heading } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import React from 'react'
+import Portfolio from '../content/portfolio'
 
 const ProjectTable = loadable(() => import(`../components/projectTable`))
 const SEO = loadable(() => import(`../components/seo`))
-const GithubContributions = loadable(() => import(`../components/githubContributions`))
-const GithubTopLanguages = loadable(() => import(`../components/githubTopLanguages`))
+
 
 const useLocal = process.env.NODE_ENV !== `production`
 const url = useLocal
@@ -20,8 +20,7 @@ const Projects: React.FC = () => {
         <Heading>Project</Heading>
       </Flex>
       {/* <ProjectTable /> */}
-      <GithubTopLanguages />
-      <GithubContributions />
+      <Portfolio />
     </>
   )
 }

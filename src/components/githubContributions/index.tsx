@@ -29,6 +29,7 @@ const GithubContributions: React.FC = () => {
         overflowX="auto"
         height="320px"
         position="relative"
+        left={{ md: '10%' }}
       >
         <Box
           position="relative"

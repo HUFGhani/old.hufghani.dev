@@ -24,7 +24,28 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+          {
+            resolve: `gatsby-remark-external-links`,
+            options: {
+              target: `_blank`,
+              rel: `noopener`,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,6 +54,13 @@ module.exports = {
         path: `./src/images/`,
       },
       __key: `images`,
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `MDXImages`,
+        path: `./src/content/`,
+      },
     },
     // {
     //   resolve: `gatsby-source-filesystem`,

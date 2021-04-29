@@ -6,7 +6,7 @@ import { topLanguages } from '../../utils'
 
 const useLocal = process.env.NODE_ENV !== `production`
 const url = useLocal
-  ? `http://localhost:4566/restapis/e90pzbj1uv/local/_user_request_/github/repositories`
+  ? `http://localhost:4566/restapis/dzhva9b0tz/local/_user_request_/github/repositories`
   : `https://api.hufghani.dev/github/repositories`
 
 const GithubTopLanguages: React.FC = () => {

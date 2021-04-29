@@ -7,7 +7,7 @@ import { contributions } from '../../utils'
 
 const useLocal = process.env.NODE_ENV !== `production`
 const url = useLocal
-  ? `http://localhost:4566/restapis/e90pzbj1uv/local/_user_request_/github/contributions`
+  ? `http://localhost:4566/restapis/dzhva9b0tz/local/_user_request_/github/contributions`
   : `https://api.hufghani.dev/github/contributions`
 
 const GithubContributions: React.FC = () => {
@@ -29,7 +29,7 @@ const GithubContributions: React.FC = () => {
         overflowX="auto"
         height="320px"
         position="relative"
-        left={{ md: '10%' }}
+        left={{ md: `10%` }}
       >
         <Box
           position="relative"

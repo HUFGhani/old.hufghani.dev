@@ -1,41 +1,76 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { ListItem, Heading, UnorderedList } from '@chakra-ui/react'
-import React from 'react'
 
+import { Box, Heading, ListItem, OrderedList, Text, UnorderedList } from '@chakra-ui/layout'
+import { Flex } from '@chakra-ui/react'
+import React from 'react'
 
 const MarkdownParser = {
   h1: (props: {
     children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
   }) => (
-    <Heading fontSize="2xl" mb={3}>
-      {props.children}
-    </Heading>
+    <Flex justify="center" pb="8">
+      <Heading as="h1" size="2xl">
+        {props.children}
+      </Heading>
+    </Flex>
   ),
   h2: (props: {
     children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
   }) => (
-    <Heading fontSize="xl" my={3}>
+    <Heading as="h2" size="xl" pb="6" wordBreak="break-word">
       {props.children}
     </Heading>
   ),
   h3: (props: {
     children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
   }) => (
-    <Heading fontSize="md" my={3}>
+    <Heading as="h3" size="lg" pb="4" wordBreak="break-word">
       {props.children}
     </Heading>
   ),
+  h4: (props: {
+    children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
+  }) => (
+    <Heading as="h4" size="md" pb="2" wordBreak="break-word">
+      {props.children}
+    </Heading>
+  ),
+  h5: (props: {
+    children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
+  }) => (
+    <Heading as="h5" size="sm" pb="1" wordBreak="break-word">
+      {props.children}
+    </Heading>
+  ),
+  h6: (props: {
+    children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
+  }) => (
+    <Heading as="h6" size="xs" pb="1" wordBreak="break-word">
+      {props.children}
+    </Heading>
+  ),
+  p: (props: { children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined }) => (
+    <Text as="p" textAlign="justify" wordBreak="break-word">
+      {props.children}
+    </Text>
+  ),
+  span: (props: {
+    children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
+  }) => <Box as="span">{props.children}</Box>,
   ul: (props: {
     children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
-  }) => <UnorderedList my={2}>{props.children}</UnorderedList>,
+  }) => <UnorderedList>{props.children}</UnorderedList>,
+  ol: (props: {
+    children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
+  }) => <OrderedList>{props.children}</OrderedList>,
   li: (props: {
     children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
   }) => <ListItem>{props.children}</ListItem>,
-  p: (props: { children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined }) => (
-    <Heading my={2} wordBreak="break-word" justifyContent="center">
-      {props.children}
-    </Heading>
-  ),
-  Section,
+  blockquote: (props: {
+    children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
+  }) => <Text as="blockquote">{props.children}</Text>,
+  pre: (props: {
+    children: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined
+  }) => <Text as="pre">{props.children}</Text>,
 }
 export default MarkdownParser

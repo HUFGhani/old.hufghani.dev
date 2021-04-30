@@ -1,4 +1,3 @@
-import { Flex, Heading } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import React from 'react'
 import Portfolio from '../content/portfolio'
@@ -10,10 +9,6 @@ const Projects: React.FC = () => {
   return (
     <>
       <SEO pageTitle="Project" />
-      <Flex justify="center" pb="8">
-        <Heading>Project</Heading>
-      </Flex>
-      {/* <ProjectTable /> */}
       <Portfolio />
     </>
   )

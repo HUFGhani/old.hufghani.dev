@@ -48,7 +48,7 @@ const DrawerNavMenu: React.FC = () => {
         onClick={() => handleClick()}
         size={`lg`}
       />
-      <Drawer onClose={onClose} isOpen={isOpen} size={`xs`}>
+      <Drawer onClose={onClose} isOpen={isOpen} size={`sm`}>
         <DrawerOverlay>
           <DrawerContent>
             <Flex justify="space-between" wrap="wrap" width="100%" mb={8} p={8} flex-wrap="wrap">

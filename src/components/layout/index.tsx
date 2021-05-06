@@ -21,17 +21,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <FeatureToggles features={features}>
       <SEOContext.Provider value={seodata}>
-        <Header />
         <Flex direction="column" align="center" maxW={{ xl: `1200px` }} m="0 auto" justify="center">
+          <Header />
           <Box
-            as="div"
+            as="main"
             margin="0 auto"
             maxWidth="960px"
             padding="0 1.0875rem 1.45rem"
             alignContent="center"
             wordBreak="break-all"
           >
-            <Box as="main">{children}</Box>
+            {children}
           </Box>
           <SocialMediaContext.Provider value={socialMediaData}>
             <Footer />

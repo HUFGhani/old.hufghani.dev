@@ -14,7 +14,7 @@ const IndexPage: React.FC = () => (
     <Text fontSize="xl" my={5}>
       Now go build something great.
     </Text>
-    <Box as="div" maxWidth="300px" marginBottom="1.45rem"></Box>
+    <Box as="div" maxWidth="300px" marginBottom="1.45rem" />
   </>
 )
 

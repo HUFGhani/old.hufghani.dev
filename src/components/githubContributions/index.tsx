@@ -21,8 +21,8 @@ const GithubContributions: React.FC = () => {
   return (
     <Skeleton isLoaded={!state.isLoading}>
       <Box
-        maxW={[`xs`, `lg`, `3xl`, `3xl`]}
-        width="150%"
+        maxW={[`18em`, `lg`, `3xl`, `3xl`]}
+        width="100%"
         borderWidth="1px"
         borderRadius="lg"
         overflow="hidden"

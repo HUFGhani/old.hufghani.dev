@@ -29,7 +29,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             maxWidth="960px"
             padding="0 1.0875rem 1.45rem"
             alignContent="center"
-            wordBreak="break-all"
+            wordBreak="break-word"
+            width={[`xs`, `lg`, `3xl`, `3xl`]}
           >
             {children}
           </Box>

@@ -48,6 +48,9 @@ const GithubTopLanguages: React.FC = () => {
           motionStiffness={90}
           motionDamping={15}
           isInteractive={false}
+          theme={{
+            textColor: isDark === `Light` ? `#f7fafc` : `#1a202c`,
+          }}
         />
       </Box>
     </Skeleton>

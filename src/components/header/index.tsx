@@ -18,16 +18,18 @@ import ThemeToggle from '../theme-toggle'
 
 let features: FeatureNames | { name: string; isActive: boolean }[]
 
-const MenuItems = (props: { [x: string]: any; children: string; isLast?: boolean; to?: string | undefined }) => {
-  const { children, isLast, to = `/`, ...rest } = props
+const MenuItems = (props: { [x: string]: any; children: string; isLast: boolean; to: string; close: any }) => {
+  const { children, isLast, to, close, ...rest } = props
   return (
     <Text mb={{ base: isLast ? 0 : 8 }} mr={{ base: 0 }} display="block" {...rest}>
-      <GatsbyLink to={to}>{children}</GatsbyLink>
+      <GatsbyLink to={to} onClick={close}>
+        {children}
+      </GatsbyLink>
     </Text>
   )
 }
 
-const Header = () => {
+const Header: React.FC = () => {
   features = useFeatures()
 
   return <>{featureIsActive(features, `headerNavBar`) ? <DrawerNavMenu /> : <OldNavMenu />}</>
@@ -59,14 +61,16 @@ const DrawerNavMenu: React.FC = () => {
               <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={`justify`}>
                 {featureIsActive(features, `projectPage`) ? (
                   <>
-                    <MenuItems to="/">Home</MenuItems>
-                    <MenuItems to="/project" isLast>
+                    <MenuItems to="/" close={onClose} isLast={false}>
+                      Home
+                    </MenuItems>
+                    <MenuItems to="/project" close={onClose} isLast={true}>
                       Project
                     </MenuItems>
                   </>
                 ) : (
                   <>
-                    <MenuItems to="/" isLast>
+                    <MenuItems to="/" close={onClose} isLast={true}>
                       Home
                     </MenuItems>
                   </>

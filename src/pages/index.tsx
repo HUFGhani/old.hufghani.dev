@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Spacer, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Img, Spacer, Text } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import React from 'react'
 import profile from './../images/profile.jpeg'
@@ -19,7 +19,15 @@ const IndexPage: React.FC = () => (
       </Box>
       <Spacer marginBottom="xs" />
       <Box>
-        <Image borderRadius="full" boxSize="2xs" src={profile} alt="Hamza Umar farooq Ghani" border="solid 1px black" />
+        <Img
+          borderRadius="full"
+          htmlHeight="16rem"
+          htmlWidth="16rem"
+          boxSize="2xs"
+          src={profile}
+          alt="Hamza Umar farooq Ghani"
+          border="solid 1px black"
+        />
       </Box>
     </Flex>
     <Box>

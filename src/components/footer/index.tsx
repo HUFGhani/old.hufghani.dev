@@ -12,11 +12,17 @@ const Footer: React.FC = () => {
 
   return (
     <Box as="footer" marginTop="2rem" fontSize="l" textAlign="center" width="100%">
-      <Text aria-label={`© 2017 - ${new Date().getFullYear()}, ${seodata?.author}`} data-testid="copyRight-year">
+      <Text
+        fontSize="sm"
+        aria-label={`© 2017 - ${new Date().getFullYear()}, ${seodata?.author}`}
+        data-testid="copyRight-year"
+      >
         © 2017 - {new Date().getFullYear()}, {seodata?.author}
       </Text>
       <SocialMedia />
-      <Text pb={`4`}>Built with Gatsby · Hosted on S3 and distributed by CloudFront</Text>
+      <Text fontSize="sm" pb={`4`}>
+        Built with Gatsby · Hosted on S3 and distributed by CloudFront
+      </Text>
       <Carbonbadge />
     </Box>
   )

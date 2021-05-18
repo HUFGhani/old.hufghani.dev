@@ -65,7 +65,7 @@ exports[`<Header/> with feature flag off should render Header 1`] = `
 exports[`<Header/> with feature flag on should render Header 1`] = `
 <DocumentFragment>
   <nav
-    class="css-dz6bnj"
+    class="css-ygbaey"
   >
     <div
       class="css-70qvj9"

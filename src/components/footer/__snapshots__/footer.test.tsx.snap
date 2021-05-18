@@ -7,7 +7,7 @@ exports[`<Footer/> should render Footer 1`] = `
   >
     <p
       aria-label="© 2017 - 2021, Hamza Umar Farooq Ghani"
-      class="chakra-text css-0"
+      class="chakra-text css-itvw0n"
       data-testid="copyRight-year"
     >
       © 2017 - 2021, Hamza Umar Farooq Ghani
@@ -81,7 +81,7 @@ exports[`<Footer/> should render Footer 1`] = `
       </div>
     </div>
     <p
-      class="chakra-text css-1fgid3w"
+      class="chakra-text css-1678xey"
     >
       Built with Gatsby · Hosted on S3 and distributed by CloudFront
     </p>

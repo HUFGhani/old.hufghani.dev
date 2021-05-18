@@ -31,7 +31,9 @@ const IndexPage: React.FC = () => (
       </Box>
     </Flex>
     <Box>
-      <Text></Text>
+      <Text marginTop="2.5rem" fontSize="lg">
+        A Father, Husband, Brother, Son and Software Engineer from Manchester, United Kingdom
+      </Text>
     </Box>
     <Box as="div" maxWidth="300px" marginBottom="1.45rem" />
   </>

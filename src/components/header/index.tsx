@@ -41,7 +41,16 @@ const DrawerNavMenu: React.FC = () => {
     onOpen()
   }
   return (
-    <Flex as="nav" align="center" justify="space-between" wrap="wrap" width="100%" mb={8} p={8} bg={[`transparent`]}>
+    <Flex
+      as="nav"
+      align="center"
+      justify="space-between"
+      wrap="wrap"
+      width="100%"
+      mb={[3, 3, 8, 8]}
+      p={[3, 3, 8, 8]}
+      bg={[`transparent`]}
+    >
       <Flex align="center">{/* <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} /> */}</Flex>
       <IconButton
         icon={<HamburgerIcon w={6} h={6} />}

@@ -2,6 +2,7 @@ import { Box, Heading } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import { FeatureNames, useFeatures } from '@paralleldrive/react-feature-toggles'
 import React from 'react'
+import Timeline from '../components/timeline'
 import { featureIsActive } from '../utils'
 
 const SEO = loadable(() => import(`../components/seo`))
@@ -12,7 +13,9 @@ const AboutMe: React.FC = () => {
     <>
       <SEO pageTitle="About Me" />
       {featureIsActive(features, `aboutMePage`) ? (
-        <></>
+        <>
+          <Timeline />
+        </>
       ) : (
         <Heading as="h1"> This page is under Construction 🚧 please try again later  </Heading>
       )}

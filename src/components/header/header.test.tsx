@@ -19,14 +19,6 @@ function renderHeader(features: { name: string; isActive: boolean }[] | FeatureN
   )
 }
 
-describe(`<Header/> with feature flag off`, () => {
-  const featureOff = [{ name: `headerNavBar`, isActive: false }]
-  it(`should render Header`, () => {
-    const { asFragment } = renderHeader(featureOff)
-    expect(asFragment()).toMatchSnapshot()
-  })
-})
-
 describe(`<Header/> with feature flag on`, () => {
   const featureOn = [{ name: `headerNavBar`, isActive: true }]
   it(`should render Header`, () => {

@@ -1,6 +1,5 @@
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import {
-  Box,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -32,7 +31,7 @@ const MenuItems = (props: { [x: string]: any; children: string; isLast: boolean;
 const Header: React.FC = () => {
   features = useFeatures()
 
-  return <>{featureIsActive(features, `headerNavBar`) ? <DrawerNavMenu /> : <OldNavMenu />}</>
+  return <DrawerNavMenu />
 }
 
 const DrawerNavMenu: React.FC = () => {
@@ -68,7 +67,19 @@ const DrawerNavMenu: React.FC = () => {
             </Flex>
             <DrawerBody>
               <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={`justify`}>
-                {featureIsActive(features, `projectPage`) ? (
+                {featureIsActive(features, `aboutMePage`) ? (
+                  <>
+                    <MenuItems to="/" close={onClose} isLast={false}>
+                      Home
+                    </MenuItems>
+                    <MenuItems to="/project" close={onClose} isLast={false}>
+                      Project
+                    </MenuItems>
+                    <MenuItems to="/about-me" close={onClose} isLast={true}>
+                      About Me
+                    </MenuItems>
+                  </>
+                ) : (
                   <>
                     <MenuItems to="/" close={onClose} isLast={false}>
                       Home
@@ -77,57 +88,12 @@ const DrawerNavMenu: React.FC = () => {
                       Project
                     </MenuItems>
                   </>
-                ) : (
-                  <>
-                    <MenuItems to="/" close={onClose} isLast={true}>
-                      Home
-                    </MenuItems>
-                  </>
                 )}
               </Flex>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
-    </Flex>
-  )
-}
-
-const OldNavMenu: React.FC = () => {
-  const [show, setShow] = React.useState(false)
-  const toggleMenu = () => setShow(!show)
-  return (
-    <Flex
-      as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      w="100%"
-      mb={8}
-      p={8}
-      bg={[`red`, `green`, `orange`]}
-      color={[`blue`, `pink`, `purple`]}
-    >
-      <Flex align="center">{/* <Logo w="100px" color={['white', 'white', 'primary.500', 'primary.500']} /> */}</Flex>
-
-      <Box data-testid="icons-button" display={{ base: `block`, md: `none` }} onClick={toggleMenu}>
-        {show ? <CloseIcon /> : <HamburgerIcon />}
-      </Box>
-
-      <Box display={{ base: show ? `block` : `none`, md: `block` }} flexBasis={{ base: `100%`, md: `auto` }}>
-        <Flex
-          align={[`center`, `center`, `center`, `center`]}
-          justify={[`center`, `space-between`, `flex-end`, `flex-end`]}
-          direction={[`column`, `row`, `row`, `row`]}
-          pt={[4, 4, 0, 0]}
-        >
-          <MenuItems to="/">Home</MenuItems>
-          <MenuItems to="/">Home</MenuItems>
-          <MenuItems to="/" isLast>
-            Pricing
-          </MenuItems>
-        </Flex>
-      </Box>
     </Flex>
   )
 }

@@ -29,6 +29,7 @@
     "@nivo/calendar": "^0.69.0",
     "@nivo/core": "^0.69.0",
     "@nivo/pie": "^0.69.0",
+    "@paralleldrive/feature-toggles": "^1.0.4",
     "@paralleldrive/react-feature-toggles": "^2.3.1",
     "@types/jest": "^26.0.23",
     "axios": "^0.21.1",
@@ -54,7 +55,8 @@
     "identity-obj-proxy": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "url-parse": "^1.5.1"
   },
   "devDependencies": {
     "@loadable/component": "^5.14.1",
@@ -67,6 +69,7 @@
     "@types/react": "^17.0.4",
     "@types/react-dom": "^17.0.3",
     "@types/react-helmet": "^6.1.1",
+    "@types/url-parse": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "babel-jest": "^26.6.3",

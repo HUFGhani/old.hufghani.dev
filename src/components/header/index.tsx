@@ -67,7 +67,7 @@ const DrawerNavMenu: React.FC = () => {
             </Flex>
             <DrawerBody>
               <Flex align={`center`} justify={`center`} direction={`column`} pt={4} textAlign={`justify`}>
-                {featureIsActive(features, `aboutMePage`) ? (
+                {featureIsActive(features, `aboutMe`) ? (
                   <>
                     <MenuItems to="/" close={onClose} isLast={false}>
                       Home

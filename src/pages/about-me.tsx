@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
   return (
     <>
       <SEO pageTitle="About Me" />
-      {featureIsActive(features, `aboutMePage`) ? (
+      {featureIsActive(features, `aboutMe`) ? (
         <>
           <Timeline />
         </>

@@ -1,8 +1,9 @@
 import { Box, Flex } from '@chakra-ui/react'
 import loadable from '@loadable/component'
+import { getCurrentActiveFeatureNames } from '@paralleldrive/feature-toggles'
 import { FeatureToggles } from '@paralleldrive/react-feature-toggles'
 import React, { ReactNode } from 'react'
-import FeatureFlags from '../../../config/featureFlags'
+import initialFeatures from '../../../config/featureFlags'
 import { SEOContext } from '../../contexts/seoContext'
 import { SocialMediaContext } from '../../contexts/socialMediaContext'
 import useSEO from '../../hooks/useSeo'
@@ -13,7 +14,13 @@ const Footer = loadable(() => import(`../footer`))
 interface LayoutProps {
   children: ReactNode
 }
-const features = FeatureFlags
+
+const url = window.location.href
+const req = { query: { url } }
+const features = getCurrentActiveFeatureNames({
+  initialFeatures,
+  req,
+})
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const seodata = useSEO()

@@ -15,7 +15,6 @@ const GithubTopLanguages: React.FC = () => {
   if (state.isLoading === false && state.response.message === `success`) {
     repositories = topLanguages(state.response.data.repositories)
   }
-  console.log(repositories)
   const { colorMode } = useColorMode()
   const isDark = colorMode === `light` ? `Dark` : `Light`
   return (

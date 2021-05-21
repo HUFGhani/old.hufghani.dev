@@ -1,5 +1,6 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/layout'
 import React from 'react'
+import './index.css'
 
 const timelineData = [
   {
@@ -33,7 +34,7 @@ const Timeline: React.FC = () => {
   return (
     <>
       {timelineData.length > 0 && (
-        <Box>
+        <Box className="timeline-container">
           {timelineData.map((data: TimelineItemInterface, idx) => (
             <TimelineItem {...data} key={idx} />
           ))}
@@ -45,11 +46,16 @@ const Timeline: React.FC = () => {
 
 const TimelineItem: React.FC<TimelineItemInterface> = ({ text, date, category }) => {
   return (
-    <>
-      {JSON.stringify(text)}
-      {JSON.stringify(date)}
-      {JSON.stringify(category)}
-    </>
+    <Box className="timeline-item">
+      <Box className="timeline-item-content">
+        <Box as="span" className="tag" style={{ background: category.color }}>
+          {category.tag}
+        </Box>
+        <Box as="time">{date}</Box>
+        <Text>{text}</Text>
+        <Box as="span" className="circle" />
+      </Box>
+    </Box>
   )
 }
 

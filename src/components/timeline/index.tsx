@@ -1,41 +1,15 @@
 import { Box, Text } from '@chakra-ui/layout'
 import React from 'react'
+import TimelineData from '../../../config/timeline'
+import TimelineItemInterface from '../../interface/TimelineItemInterface'
 import './index.css'
-
-const timelineData = [
-  {
-    text: `Wrote my first blog post ever on Medium`,
-    date: `March 03 2017`,
-    category: {
-      tag: `medium`,
-      color: `#018f69`,
-    },
-  },
-  {
-    text: `Wrote my first blog post ever on Medium`,
-    date: `March 03 2017`,
-    category: {
-      tag: `medium`,
-      color: `#018f69`,
-    },
-  },
-]
-
-interface TimelineItemInterface {
-  text: string
-  date: string
-  category: {
-    tag: string
-    color: string
-  }
-}
 
 const Timeline: React.FC = () => {
   return (
     <>
-      {timelineData.length > 0 && (
+      {TimelineData.length > 0 && (
         <Box className="timeline-container">
-          {timelineData.map((data: TimelineItemInterface, idx) => (
+          {TimelineData.map((data: TimelineItemInterface, idx) => (
             <TimelineItem {...data} key={idx} />
           ))}
         </Box>

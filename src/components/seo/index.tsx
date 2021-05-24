@@ -12,20 +12,20 @@ const SEO: React.FC<SEOProps> = ({ pageTitle }) => {
     <Helmet>
       <meta charSet="utf-8" />
       <title>{pageTitle}</title>
-      <html lang={data.siteLanguage} />
-      <meta name="description" content={data.description} />
-      <meta name="apple-mobile-web-app-title" content={data.shortName} />
-      <meta name="application-name" content={data.shortName} />
-      <meta name="author" content={data.author}></meta>
+      <html lang={data?.siteLanguage} />
+      <meta name="description" content={data?.description} />
+      <meta name="apple-mobile-web-app-title" content={data?.shortName} />
+      <meta name="application-name" content={data?.shortName} />
+      <meta name="author" content={data?.author}></meta>
 
-      <meta property="og:url" content={data.url} />
+      <meta property="og:url" content={data?.url} />
       <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={data.description} />
+      <meta property="og:description" content={data?.description} />
 
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content={data.twitter} />
+      <meta name="twitter:creator" content={data?.twitter} />
       <meta name="twitter:title" content={pageTitle} />
-      <meta name="twitter:description" content={data.description} />
+      <meta name="twitter:description" content={data?.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     </Helmet>
   )

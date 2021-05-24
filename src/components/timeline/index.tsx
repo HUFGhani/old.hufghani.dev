@@ -1,7 +1,7 @@
 import { Box, Text } from '@chakra-ui/layout'
 import React from 'react'
 import TimelineData from '../../../config/timeline'
-import TimelineItemInterface from '../../interface/TimelineItemInterface'
+import TimelineItemInterface from '../../interface/timelineItemInterface'
 import './index.css'
 
 const Timeline: React.FC = () => {

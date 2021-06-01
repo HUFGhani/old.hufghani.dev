@@ -8,6 +8,7 @@ import { SEOContext } from '../../contexts/seoContext'
 import { SocialMediaContext } from '../../contexts/socialMediaContext'
 import useSEO from '../../hooks/useSeo'
 import useSocialMedia from '../../hooks/useSocialMedia'
+
 const Header = loadable(() => import(`./../header`))
 const Footer = loadable(() => import(`../footer`))
 

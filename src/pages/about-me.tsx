@@ -2,11 +2,13 @@ import { Box, Heading } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import { FeatureNames, useFeatures } from '@paralleldrive/react-feature-toggles'
 import React from 'react'
-import Timeline from '../components/timeline'
 import { featureIsActive } from '../utils'
 
 const SEO = loadable(() => import(`../components/seo`))
+const Timeline = loadable(() => import(`../components/timeline`))
+
 let features: FeatureNames | { name: string; isActive: boolean }[]
+
 const AboutMe: React.FC = () => {
   features = useFeatures()
   return (

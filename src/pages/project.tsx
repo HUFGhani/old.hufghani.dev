@@ -1,9 +1,9 @@
 import { Box } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import React from 'react'
-import Project from '../content/project'
 
 const SEO = loadable(() => import(`../components/seo`))
+const Project = loadable(() => import(`../content/project`))
 
 const Projects: React.FC = () => {
   return (

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Timeline/> should render Footer 1`] = `
+<DocumentFragment>
+  <nav
+    class="css-ygbaey"
+  >
+    <div
+      class="css-70qvj9"
+    />
+    <button
+      aria-label="Hamburger Menu"
+      class="chakra-button css-ng89r3"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="chakra-icon css-n5gr1q"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </nav>
+  <div
+    class="timeline-container css-fv0w0a"
+  >
+    <div
+      class="timeline-item css-0"
+    >
+      <div
+        class="timeline-item-content css-wlpogo"
+      >
+        <span
+          class="tag css-0"
+          style="background: rgb(1, 143, 105);"
+        >
+          medium
+        </span>
+        <time
+          class="css-0"
+        >
+          March 03 2017
+        </time>
+        <p
+          class="chakra-text css-0"
+        >
+          Wrote my first blog post ever on Medium
+        </p>
+        <span
+          class="circle css-1asj0mp"
+        />
+      </div>
+    </div>
+    <div
+      class="timeline-item css-0"
+    >
+      <div
+        class="timeline-item-content css-wlpogo"
+      >
+        <span
+          class="tag css-0"
+          style="background: rgb(1, 143, 105);"
+        >
+          medium
+        </span>
+        <time
+          class="css-0"
+        >
+          March 03 2017
+        </time>
+        <p
+          class="chakra-text css-0"
+        >
+          Wrote my first blog post ever on Medium
+        </p>
+        <span
+          class="circle css-1asj0mp"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

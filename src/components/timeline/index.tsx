@@ -34,8 +34,8 @@ const TimelineItem: React.FC<TimelineItemInterface> = ({ text, date, category })
     <Box className="timeline-item">
       <Box
         className="timeline-item-content"
-        backgroundColor={isDark === `Light` ? `var(--chakra-colors-gray-800);` : `#fff`}
-        _after={{ backgroundColor: isDark === `Light` ? `var(--chakra-colors-gray-800);` : `#fff` }}
+        backgroundColor={isDark === `Light` ? `var(--chakra-colors-gray-800)` : `#fff`}
+        _after={{ backgroundColor: isDark === `Light` ? `var(--chakra-colors-gray-800)` : `#fff` }}
       >
         <Box as="span" className="tag" style={{ background: category.color }}>
           {category.tag}

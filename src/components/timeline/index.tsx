@@ -1,23 +1,24 @@
 import { Box, Text } from '@chakra-ui/layout'
 import { useColorMode } from '@chakra-ui/react'
 import React from 'react'
-import TimelineData from '../../../config/timeline'
+import { useTimeLineDataCotext } from '../../contexts/timeLineDataCotext'
 import TimelineItemInterface from '../../interface/timelineItemInterface'
 import './index.css'
 
 const Timeline: React.FC = () => {
   const { colorMode } = useColorMode()
   const isDark = colorMode === `light` ? `Dark` : `Light`
+  const TimelineData = useTimeLineDataCotext()
   return (
     <>
-      {TimelineData.length > 0 && (
+      {TimelineData?.length > 0 && (
         <Box
           className="timeline-container"
           _after={{
             backgroundColor: isDark === `Light` ? `#00ffbc` : `#0e11a8`,
           }}
         >
-          {TimelineData.map((data: TimelineItemInterface, idx) => (
+          {TimelineData?.map((data: TimelineItemInterface, idx: React.Key | null | undefined) => (
             <TimelineItem {...data} key={idx} />
           ))}
         </Box>

@@ -34,14 +34,7 @@ const TimelineItem: React.FC<TimelineItemInterface> = ({ text, date, category })
       <Box
         className="timeline-item-content"
         backgroundColor={isDark === `Light` ? `var(--chakra-colors-gray-800);` : `#fff`}
-        // boxShadow={isDark === `Light` ? `0 0 5px rgba(255, 255, 255, 0.3)` : `0 0 5px rgba(0, 0, 0, 0.3)`}
-        _after={{
-          backgroundColor: isDark === `Light` ? `var(--chakra-colors-gray-800)` : `#fff`,
-          // boxShadow: isDark === `Light` ? `1px -1px 1px rgba(255, 255, 255, 0.3)` : `1px -1px 1px rgba(0, 0, 0, 0.3)`,
-          '&:nth-child(odd)': {
-            boxShadow: isDark === `Light` ? `-1px 1px 1px rgba(255, 255, 255, 0.3)` : `-1px 1px 1px rgba(0, 0, 0, 0.3)`,
-          },
-        }}
+        _after={{ backgroundColor: isDark === `Light` ? `var(--chakra-colors-gray-800);` : `#fff` }}
       >
         <Box as="span" className="tag" style={{ background: category.color }}>
           {category.tag}

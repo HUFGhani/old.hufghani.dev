@@ -1,48 +1,46 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Welcome to hufghani-website 👋
 
-## 🚀 Quick start
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/HUFGhani/hufghani-website/blob/master/LICENSE)
+[![Twitter: the_ghani](https://img.shields.io/twitter/follow/the_ghani.svg?style=social)](https://twitter.com/the_ghani)
 
-1.  **Create a Gatsby site.**
+> My personal site built with Gatsby, React and Chakra-ui
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+### ✨ [Link to site](https://hufghani.dev)
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Install
 
-2.  **Start developing.**
+```sh
+yarn install
+```
 
-    Navigate into your new site’s directory and start it up.
+## Usage
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+To run in local in dev
 
-3.  **Open the code and start customizing!**
+```sh
+yarn dev
+```
 
-    Your site is now running at http://localhost:8000!
+To build
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+```sh
+yarn build
+```
 
-4.  **Learn more**
+To deploy to S3 bucket it use Github actions
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Run tests
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```sh
+yarn  test
+```
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Author
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+👤 **Hamza Ghani**
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- Website: hufghani.dev
+- Twitter: [@the_ghani](https://twitter.com/the_ghani)
+- Github: [@hufghani](https://github.com/hufghani)
+- LinkedIn: [@hamza-u-f-ghani](https://linkedin.com/in/hamza-u-f-ghani)

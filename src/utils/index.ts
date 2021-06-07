@@ -1,4 +1,5 @@
 import { FeatureNames } from '@paralleldrive/react-feature-toggles'
+import TimelineItemInterface from '../interface/timelineItemInterface'
 
 export const featureIsActive = (
   features: FeatureNames | { name: string; isActive: boolean }[],
@@ -7,7 +8,7 @@ export const featureIsActive = (
   return features.includes(featureFlagName)
 }
 
-export const contributions = (weeks: any) => {
+export const contributions = (weeks: any): any[] => {
   const arrayOfDays = []
 
   for (const { contributionDays } of weeks) {
@@ -49,3 +50,12 @@ const formatLanguagesForChart = (langObject: any) =>
       color,
     }))
     .filter(data => data.color && data.value > 1)
+
+export const timelineDataSort = (timelineData: TimelineItemInterface[]): TimelineItemInterface[] => {
+  if (typeof timelineData !== `undefined`) {
+    return timelineData.sort(function (a: { date: string | number | Date }, b: { date: string | number | Date }) {
+      return new Date(a.date) - new Date(b.date)
+    })
+  }
+  return []
+}

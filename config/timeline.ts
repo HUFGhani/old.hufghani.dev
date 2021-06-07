@@ -1,18 +1,27 @@
+enum Tag {
+  WORK = `work`,
+  EDUCATION = `education`,
+}
+enum Colour {
+  workColour = `#736CED`,
+  educationColour = `#018f69`,
+}
+
 export const TimelineData = [
   {
-    text: `Wrote my first blog post ever on Medium`,
-    date: `March 03 2017`,
+    text: `Start at my first job which was at Mcdonald's`,
+    date: `August 30 2009`,
     category: {
-      tag: `medium`,
-      color: `#018f69`,
+      tag: Tag.WORK,
+      color: Colour.workColour,
     },
   },
   {
-    text: `Wrote my first blog post ever on Medium`,
-    date: `March 03 2017`,
+    text: `Left High School`,
+    date: `August 27 2009`,
     category: {
-      tag: `medium`,
-      color: `#018f69`,
+      tag: Tag.EDUCATION,
+      color: Colour.educationColour,
     },
   },
 ]

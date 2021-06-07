@@ -3,12 +3,13 @@ import { useColorMode } from '@chakra-ui/react'
 import React from 'react'
 import { useTimeLineDataCotext } from '../../contexts/timeLineDataCotext'
 import TimelineItemInterface from '../../interface/timelineItemInterface'
+import { timelineDataSort } from '../../utils'
 import './index.css'
 
 const Timeline: React.FC = () => {
   const { colorMode } = useColorMode()
   const isDark = colorMode === `light` ? `Dark` : `Light`
-  const TimelineData = useTimeLineDataCotext()
+  const TimelineData: TimelineItemInterface[] = timelineDataSort(useTimeLineDataCotext())
   return (
     <>
       {TimelineData?.length > 0 && (

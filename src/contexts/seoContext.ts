@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { createContext, useContext } from 'react'
 import SEOInterface from '../interface/seoInterface'
 

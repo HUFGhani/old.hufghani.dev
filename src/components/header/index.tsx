@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import {
   Drawer,

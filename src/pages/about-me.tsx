@@ -5,7 +5,7 @@ import React from 'react'
 import { featureIsActive } from '../utils'
 
 const SEO = loadable(() => import(`../components/seo`))
-const Timeline = loadable(() => import(`../components/timeline`))
+const About_Me = loadable(() => import(`../content/pages/aboutMe`))
 
 let features: FeatureNames | { name: string; isActive: boolean }[]
 
@@ -15,9 +15,7 @@ const AboutMe: React.FC = () => {
     <>
       <SEO pageTitle="About Me" />
       {featureIsActive(features, `aboutMe`) ? (
-        <>
-          <Timeline />
-        </>
+        <About_Me />
       ) : (
         <Heading as="h1"> This page is under Construction 🚧 please try again later  </Heading>
       )}

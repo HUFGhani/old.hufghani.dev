@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Box, Skeleton, useColorMode } from '@chakra-ui/react'
 import { ResponsivePieCanvas } from '@nivo/pie'
 import React from 'react'

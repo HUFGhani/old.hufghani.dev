@@ -3,7 +3,7 @@ import loadable from '@loadable/component'
 import React from 'react'
 
 const SEO = loadable(() => import(`../components/seo`))
-const Project = loadable(() => import(`../content/project`))
+const Project = loadable(() => import(`../content/pages/project`))
 
 const Projects: React.FC = () => {
   return (

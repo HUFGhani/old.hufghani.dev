@@ -4,6 +4,9 @@
 name: Test and Deploy to AWS
 
 on:
+  repository_dispatch:
+    types:
+      - deploy-blog-webhook
   workflow_dispatch:
   push:
     branches: [master]
@@ -86,3 +89,7 @@ jobs:
 
       - name: Clearing cache on CloudFront
         run: aws cloudfront create-invalidation --distribution-id E957SBWV986E2 --paths '/*'
+
+      - name: Deployed Blog
+        if: ${{ github.event.action == 'deploy-blog-webhook' }}
+        run: echo "blog page has been deployed"

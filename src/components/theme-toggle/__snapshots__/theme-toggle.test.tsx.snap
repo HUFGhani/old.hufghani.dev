@@ -4,7 +4,7 @@ exports[`<ThemeToggle/> should render ThemeToggle 1`] = `
 <DocumentFragment>
   <button
     aria-label="Toggle Theme"
-    class="chakra-button css-ng89r3"
+    class="chakra-button css-1ccmbpd"
     type="button"
   >
     <svg

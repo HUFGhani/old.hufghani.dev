@@ -10,7 +10,7 @@ exports[`<Timeline/> should render Footer 1`] = `
     />
     <button
       aria-label="Hamburger Menu"
-      class="chakra-button css-ng89r3"
+      class="chakra-button css-1ccmbpd"
       type="button"
     >
       <svg

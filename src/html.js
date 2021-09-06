@@ -32,7 +32,12 @@ export default function HTML(props) {
         >
           <LoaderSVG alt="loading spinner" width="150" height="150" />
         </div>
-        <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
+        <div
+          key={`body`}
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: props.body }}
+          style={{ width: `100%`, height: `100%` }}
+        />
         {props.postBodyComponents}
       </body>
     </html>

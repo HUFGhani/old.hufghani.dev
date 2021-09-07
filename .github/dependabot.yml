@@ -10,9 +10,9 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-			time: "08:00"
-			timezone: "Europe/London"
-		target-branch: "master"
+      time: "08:00"
+      timezone: "Europe/London"
+    target-branch: "master"
     labels:
       - "dependencies"
     commit-message:

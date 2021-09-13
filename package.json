@@ -83,7 +83,7 @@
     "gatsby-plugin-sitemap": "^4.9.0",
     "jest": "^27.1.0",
     "prettier": "^2.3.2",
-    "typescript": "^4.4.2"
+    "typescript": "^4.4.3"
   },
   "jest": {
     "coverageDirectory": "./coverage/",

@@ -69,7 +69,7 @@
     "@types/loadable__component": "^5.13.4",
     "@types/mdx-js__react": "^1.5.4",
     "@types/node": "^16.10.1",
-    "@types/react": "^17.0.22",
+    "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "@types/react-helmet": "^6.1.2",
     "@types/url-parse": "^1.4.4",

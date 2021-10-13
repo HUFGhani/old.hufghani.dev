@@ -93,3 +93,11 @@ jobs:
       - name: Deployed Blog
         if: ${{ github.event.action == 'deploy-blog-webhook' }}
         run: echo "blog page has been deployed"
+
+      - name: send message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            Website has been deployed to AWS 🚀.

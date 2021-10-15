@@ -18,7 +18,7 @@ custom:
     domain:
       - hufghani.dev
       - '*.hufghani.dev'
-    certificate: ${ssm:/certificateARN}  # The ARN for the SSL cert to use form AWS CertificateManager
+    certificate: arn:aws:acm:us-east-1:078423179649:certificate/97371e2d-25f9-49a8-8feb-e7ca2c6bb7fa  # The ARN for the SSL cert to use form AWS CertificateManager
     bucketName: hufghani.dev # Unique name for the S3 bucket to host the client assets
     distributionFolder: public # Path to the client assets to be uploaded to S3
     indexDocument: index.html # The index document to use

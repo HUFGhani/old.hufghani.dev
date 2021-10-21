@@ -1,0 +1,36 @@
+service: hufghani-website
+
+frameworkVersion: '2'
+variablesResolutionMode: 20210326
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  stage: ${opt:stage, self:custom.defaultStage}
+  region: eu-west-2
+
+plugins:
+  - fullstack-serverless
+
+custom:
+  fullstack:
+    domain:
+      - hufghani.dev
+      - '*.hufghani.dev'
+    certificate: arn:aws:acm:us-east-1:078423179649:certificate/97371e2d-25f9-49a8-8feb-e7ca2c6bb7fa  # The ARN for the SSL cert to use form AWS CertificateManager
+    bucketName: hufghani.dev # Unique name for the S3 bucket to host the client assets
+    distributionFolder: public # Path to the client assets to be uploaded to S3
+    indexDocument: index.html # The index document to use
+    errorDocument: 404.html # The error document to use
+    singlePageApp: false # If true 403 errors will be rerouted (missing assets) to your root index document to support single page apps like React and Angular where the js framework handles routing
+    invalidationPaths: # Custom invalidationPaths for cloudfront in case your frontend framework uses filename hashing
+      - /index.html
+      - /404.html
+    DefaultCacheBehavior:
+      AllowedMethods:
+        - GET
+        - HEAD
+    compressWebContent: true # Use compression when serving web content
+    minimumProtocolVersion: TLSv1.2_2021
+    noConfirm: true

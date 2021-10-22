@@ -1,2 +1,2 @@
-import WrapPageElement from '@components/WrapPageElement'
+import WrapPageElement from '@components/wrapPageElement'
 export const wrapPageElement = WrapPageElement

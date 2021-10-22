@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/layout'
-import NavBar from '@components/NavBar'
+import NavBar from '@components/navBar'
 import React, { ReactElement } from 'react'
 
 interface LayoutInterfaceProp {

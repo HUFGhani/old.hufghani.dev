@@ -1,14 +1,20 @@
+const siteConfig = require('./config/')
+
 module.exports = {
+  siteMetadata: {
+    ...siteConfig,
+  },
   plugins: [
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-mdx`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         icon: `src/images/icon.png`,
       },
     },
-    `gatsby-plugin-mdx`,
-    `gatsby-transformer-sharp`,
     {
       resolve: '@chakra-ui/gatsby-plugin',
       options: {

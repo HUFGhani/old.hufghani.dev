@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `src/images/icon.png`,
+        icon: `${__dirname}/images/icon.png`,
       },
     },
     {
@@ -26,7 +26,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `./src/images/`,
+        path: `${__dirname}/src/images/`,
       },
       __key: `images`,
     },

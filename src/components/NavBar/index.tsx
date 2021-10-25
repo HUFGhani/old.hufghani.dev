@@ -1,5 +1,6 @@
 import { Box, Flex, Stack, useColorMode } from '@chakra-ui/react'
 import ThemeToggle from '@components/themeToggle'
+import { useNavMenu } from '@hooks/useNavMenu'
 import { Link } from 'gatsby'
 import React from 'react'
 
@@ -33,11 +34,18 @@ const MenuItem = (props: { [x: string]: any; children: string; to: string }) => 
 }
 
 const MenuLinks = () => {
+  const { menu } = useNavMenu()
+  const sortMenu = menu.sort((a: { url: string; name: string }, b: { url: string; name: string }) =>
+    a.name.localeCompare(b.name)
+  )
   return (
     <Stack spacing={8} align="center" justify="flex-end" direction="row" pt="0">
       <MenuItem to="/">Home</MenuItem>
-      <MenuItem to="/project">Project</MenuItem>
-      <MenuItem to="/about-me">About Me</MenuItem>
+      {sortMenu.map((m: { url: string; name: string }) => (
+        <MenuItem key={m.name} to={m.url}>
+          {m.name}
+        </MenuItem>
+      ))}
       <ThemeToggle />
     </Stack>
   )

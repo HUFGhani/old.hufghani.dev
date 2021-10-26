@@ -1,8 +1,9 @@
-import { Box, Flex, Heading, Link, Stack, useColorMode } from '@chakra-ui/react'
+import { Box, Flex, Heading, Stack, useColorMode } from '@chakra-ui/react'
 import ThemeToggle from '@components/themeToggle'
 import '@css/typography.css'
 import { useNavMenu } from '@hooks/useNavMenu'
 import { useSEO } from '@hooks/useSEO'
+import { Link } from 'gatsby'
 import React from 'react'
 
 const NavBar = () => {
@@ -56,14 +57,18 @@ const MenuLinks = () => {
 const Logo = () => {
   const { authorName } = useSEO()
   return (
-    <Box
-      paddingBottom="15px"
-      sx={{
-        _hover: 'underline',
-      }}
-    >
-      <Link>
-        <Heading as="h1" fontFamily="Dr Sugiyama, cursive" fontWeight="normal">
+    <Box className="logo">
+      <Link to="/">
+        <Heading
+          as="h1"
+          fontFamily="Dr Sugiyama, cursive"
+          fontWeight="normal"
+          sx={{
+            '.logo:hover &': {
+              textDecoration: 'underline',
+            },
+          }}
+        >
           {authorName}
         </Heading>
       </Link>

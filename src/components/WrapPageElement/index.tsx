@@ -1,6 +1,8 @@
 import { ChakraProvider, CSSReset } from '@chakra-ui/react'
-import Layout from '@components/layout'
+import loadable from '@loadable/component'
 import React, { ReactElement } from 'react'
+
+const Layout = loadable(() => import('@components/layout'))
 
 interface WrapPageElementProps {
   element: ReactElement

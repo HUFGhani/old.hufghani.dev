@@ -1,7 +1,9 @@
 import { Box, Divider, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import SEO from '@components/seo'
 import { useProfilePicture } from '@hooks/useProfilePicture'
+import loadable from '@loadable/component'
 import React from 'react'
+
+const SEO = loadable(() => import('@components/seo'))
 
 // markup
 const IndexPage: React.FC = () => {

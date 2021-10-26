@@ -1,12 +1,14 @@
-import { Box, Flex, Stack, useColorMode } from '@chakra-ui/react'
+import { Box, Flex, Heading, Link, Stack, useColorMode } from '@chakra-ui/react'
 import ThemeToggle from '@components/themeToggle'
+import '@css/typography.css'
 import { useNavMenu } from '@hooks/useNavMenu'
-import { Link } from 'gatsby'
+import { useSEO } from '@hooks/useSEO'
 import React from 'react'
 
 const NavBar = () => {
   return (
-    <Flex as="nav" align="center" justify="flex-end" wrap="wrap" w="100%" p="8" bg="transparent">
+    <Flex as="nav" align="center" justify="space-between" wrap="wrap" w="100%" p="8" bg="transparent">
+      <Logo />
       <MenuLinks />
     </Flex>
   )
@@ -48,6 +50,24 @@ const MenuLinks = () => {
       ))}
       <ThemeToggle />
     </Stack>
+  )
+}
+
+const Logo = () => {
+  const { authorName } = useSEO()
+  return (
+    <Box
+      paddingBottom="15px"
+      sx={{
+        _hover: 'underline',
+      }}
+    >
+      <Link>
+        <Heading as="h1" fontFamily="Dr Sugiyama, cursive" fontWeight="normal">
+          {authorName}
+        </Heading>
+      </Link>
+    </Box>
   )
 }
 

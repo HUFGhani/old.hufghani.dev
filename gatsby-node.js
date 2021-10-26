@@ -5,6 +5,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       alias: {
         '@components': path.resolve(__dirname, 'src/components'),
         '@hooks': path.resolve(__dirname, 'src/hooks'),
+        '@css': path.resolve(__dirname, 'src/css'),
       },
     },
   })

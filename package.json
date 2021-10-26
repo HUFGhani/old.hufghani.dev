@@ -118,6 +118,10 @@
           [
             "@hooks",
             "./src/hooks/*"
+          ],
+          [
+            "@css",
+            "./src/css/*"
           ]
         ]
       }

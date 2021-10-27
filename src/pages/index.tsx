@@ -34,6 +34,8 @@ const IndexPage: React.FC = () => {
                 src={useProfilePicture()}
                 alt="Hamza Umar farooq Ghani"
                 border="solid 1px black"
+                width="160px"
+                height="160px"
               />
             </Box>
           </Flex>

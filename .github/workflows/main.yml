@@ -94,6 +94,7 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v8
         with:
+          configPath: '.github/lighthouse/lighthouserc.json'
           urls: |
             https://hufghani.dev
           budgetPath: ./budget.json # test performance budgets

@@ -30,5 +30,13 @@ module.exports = {
       },
       __key: `images`,
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.hufghani.dev',
+        sitemap: 'https://www.hufghani.dev/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 }

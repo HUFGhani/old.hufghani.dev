@@ -28,6 +28,8 @@ custom:
       - /index.html
       - /404.html
     DefaultCacheBehavior:
+      MinTTL: 2630000
+      DefaultTTL: 31560000
       AllowedMethods:
         - GET
         - HEAD

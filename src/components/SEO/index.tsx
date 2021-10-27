@@ -1,8 +1,6 @@
 import { useSEO } from '@hooks/useSEO'
-import loadable from '@loadable/component'
 import React from 'react'
-
-const PageSEO = loadable(() => import('react-seo-component'))
+import * as PageSEO from 'react-seo-component'
 
 interface SEOInterfaceProp {
   pageTitle: string
@@ -11,7 +9,7 @@ interface SEOInterfaceProp {
 const SEO: React.FC<SEOInterfaceProp> = ({ pageTitle }) => {
   const { title, description, siteUrl, twitterUsername, authorName, siteLanguage, siteLocale } = useSEO()
   return (
-    <PageSEO
+    <PageSEO.default
       title={pageTitle}
       titleTemplate={title}
       description={description}

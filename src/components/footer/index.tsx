@@ -1,8 +1,8 @@
 import { Box, Flex, Icon, Link, Text } from '@chakra-ui/react'
-import { useSEO } from '@hooks/useSEO'
-import { useSocialMedia } from '@hooks/useSocialMedia'
 import React from 'react'
 import { FaGithubSquare, FaInstagram, FaLinkedin, FaTwitterSquare } from 'react-icons/fa'
+import { useSEO } from '../../hooks/useSEO'
+import { useSocialMedia } from '../../hooks/useSocialMedia'
 
 const Footer: React.FC = () => {
   const seodata = useSEO()

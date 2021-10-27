@@ -110,24 +110,6 @@
           "printWidth": 120
         }
       ]
-    },
-    "settings": {
-      "import/resolver": {
-        "alias": [
-          [
-            "@components",
-            "./src/components/*"
-          ],
-          [
-            "@hooks",
-            "./src/hooks/*"
-          ],
-          [
-            "@css",
-            "./src/css/*"
-          ]
-        ]
-      }
     }
   },
   "prettier": {

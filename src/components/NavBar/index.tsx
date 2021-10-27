@@ -1,10 +1,10 @@
 import { Box, Flex, Heading, Stack, useColorMode } from '@chakra-ui/react'
-import ThemeToggle from '@components/ThemeToggle'
 import '@css/typography.css'
-import { useNavMenu } from '@hooks/useNavMenu'
-import { useSEO } from '@hooks/useSEO'
 import { Link } from 'gatsby'
 import React from 'react'
+import { useNavMenu } from '../../hooks/useNavMenu'
+import { useSEO } from '../../hooks/useSEO'
+import ThemeToggle from '../ThemeToggle'
 
 const NavBar = () => {
   return (

@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react'
-import Footer from '@components/footer'
-import NavBar from '@components/navBar'
 import React, { ReactElement } from 'react'
+import Footer from '../footer'
+import NavBar from '../NavBar'
 
 interface LayoutInterfaceProp {
   children: ReactElement

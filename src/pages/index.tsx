@@ -1,7 +1,7 @@
 import { Box, Divider, Flex, Heading, Img, Text } from '@chakra-ui/react'
-import SEO from '@components/SEO'
-import { useProfilePicture } from '@hooks/useProfilePicture'
 import React from 'react'
+import SEO from '../components/SEO'
+import { useProfilePicture } from '../hooks/useProfilePicture'
 
 // markup
 const IndexPage: React.FC = () => {

@@ -1,6 +1,6 @@
-import { useSEO } from '@hooks/useSEO'
 import React from 'react'
 import * as PageSEO from 'react-seo-component'
+import { useSEO } from '../../hooks/useSEO'
 
 interface SEOInterfaceProp {
   pageTitle: string

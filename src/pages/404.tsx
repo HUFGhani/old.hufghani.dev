@@ -1,6 +1,6 @@
 import { Heading, Text } from '@chakra-ui/react'
-import SEO from '@components/SEO'
 import React from 'react'
+import SEO from '../components/SEO'
 
 const NotFoundPage: React.FC = () => {
   return (

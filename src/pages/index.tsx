@@ -1,5 +1,6 @@
 import { Box, Divider, Flex, Heading, Img, Text } from '@chakra-ui/react'
 import React from 'react'
+import GithubContributions from '../components/githubContributions'
 import SEO from '../components/SEO'
 import { useProfilePicture } from '../hooks/useProfilePicture'
 
@@ -36,6 +37,7 @@ const IndexPage: React.FC = () => {
                 border="solid 1px black"
                 htmlWidth="160px"
                 htmlHeight="160px"
+                boxShadow="dark-lg"
               />
             </Box>
           </Flex>
@@ -45,7 +47,33 @@ const IndexPage: React.FC = () => {
             </Text>
           </Box>
         </Box>
-        <Divider orientation="horizontal" />
+        <Divider orientation="horizontal" marginBottom="2rem" />
+        <Flex
+          as="section"
+          justifyContent="center"
+          flexDirection="column"
+          alignContent="center"
+          width="100%"
+          alignItems="center"
+        >
+          <Heading as="h2" paddingBottom="40px">
+            Latest Articles
+          </Heading>
+        </Flex>
+        <Divider orientation="horizontal" marginBottom="2rem" />
+        <Flex
+          as="section"
+          justifyContent="center"
+          flexDirection="column"
+          alignContent="center"
+          alignItems="center"
+          width="100%"
+        >
+          <Heading as="h2" paddingBottom="40px">
+            Latest Github Activity
+          </Heading>
+          <GithubContributions />
+        </Flex>
       </main>
     </>
   )

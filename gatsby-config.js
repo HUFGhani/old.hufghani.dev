@@ -9,7 +9,6 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -37,6 +36,32 @@ module.exports = {
         host: 'https://www.hufghani.dev',
         sitemap: 'https://www.hufghani.dev/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => 'https://www.hufghani.dev',
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
       },
     },
   ],

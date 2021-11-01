@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutInterfaceProp> = ({ children }) => {
       justify="center"
       maxW={{ xl: `1200px` }}
       m="0 auto"
-      paddingX={['1rem', '1rem', '6rem', '6rem']}
+      paddingX={['1rem', '1rem', '5rem', '5rem']}
     >
       <NavBar />
       {children}

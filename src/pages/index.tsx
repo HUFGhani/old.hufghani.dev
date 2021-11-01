@@ -11,8 +11,9 @@ const IndexPage: React.FC = () => {
       <SEO pageTitle="Home" />
       <main>
         <Box
-          paddingTop={[`0.5rem`, `0.5rem`, `5.5rem`, `5.5rem`]}
+          paddingTop={[`0.5rem`, `0.5rem`, `5rem`, `5rem`]}
           paddingBottom={[`0.2rem`, `0.2rem`, `2.5rem`, `2.5rem`]}
+          textAlign="center"
         >
           <Flex direction={[`column`, `column`, `row`, `row`]} justify="center" alignItems="center" width="100%">
             <Box width={{ sm: `100%`, md: `60%`, lg: `60%` }}>

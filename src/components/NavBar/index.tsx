@@ -11,11 +11,11 @@ const NavBar = () => {
     <Flex
       as="nav"
       align="center"
-      direction="column"
-      justify={{ base: 'center', sm: 'center', md: 'center', lg: 'center', xl: 'center' }}
+      direction={{ base: 'column', sm: 'column', md: 'row', lg: 'row', xl: 'row' }}
+      justify={{ base: 'center', sm: 'center', md: 'center', lg: 'space-evenly', xl: 'space-evenly' }}
       wrap="wrap"
       w="100%"
-      pt="8"
+      pt="10"
       px={['1', '1', '8', '8']}
       bg="transparent"
     >
@@ -31,7 +31,8 @@ const MenuItem = (props: { [x: string]: any; children: string; to: string }) => 
   return (
     <Box
       borderRadius="md"
-      padding="2.5"
+      padding="1.5"
+      textAlign="center"
       sx={{
         _hover: {
           backgroundColor:
@@ -52,7 +53,15 @@ const MenuLinks = () => {
     a.name.localeCompare(b.name)
   )
   return (
-    <Stack spacing={8} align="center" justify="center" direction="row" pt="0">
+    <Stack
+      paddingLeft={{ md: '10' }}
+      spacing={4}
+      align="center"
+      justify="center"
+      direction="row"
+      pt="3.5"
+      fontSize="md"
+    >
       <MenuItem to="/">Home</MenuItem>
       {sortMenu.map((m: { url: string; name: string }) => (
         <MenuItem key={m.name} to={m.url}>

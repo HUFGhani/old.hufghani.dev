@@ -8,7 +8,17 @@ import ThemeToggle from '../ThemeToggle'
 
 const NavBar = () => {
   return (
-    <Flex as="nav" align="center" justify="space-between" wrap="wrap" w="100%" p="8" bg="transparent">
+    <Flex
+      as="nav"
+      align="center"
+      direction="column"
+      justify={{ base: 'center', sm: 'center', md: 'center', lg: 'center', xl: 'center' }}
+      wrap="wrap"
+      w="100%"
+      pt="8"
+      px={['1', '1', '8', '8']}
+      bg="transparent"
+    >
       <Logo />
       <MenuLinks />
     </Flex>
@@ -42,7 +52,7 @@ const MenuLinks = () => {
     a.name.localeCompare(b.name)
   )
   return (
-    <Stack spacing={8} align="center" justify="flex-end" direction="row" pt="0">
+    <Stack spacing={8} align="center" justify="center" direction="row" pt="0">
       <MenuItem to="/">Home</MenuItem>
       {sortMenu.map((m: { url: string; name: string }) => (
         <MenuItem key={m.name} to={m.url}>

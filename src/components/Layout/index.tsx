@@ -8,7 +8,14 @@ interface LayoutInterfaceProp {
 }
 const Layout: React.FC<LayoutInterfaceProp> = ({ children }) => {
   return (
-    <Flex direction="column" align="center" justify="center" maxW={{ xl: `1200px` }} m="0 auto" paddingX="6rem">
+    <Flex
+      direction="column"
+      align="center"
+      justify="center"
+      maxW={{ xl: `1200px` }}
+      m="0 auto"
+      paddingX={['1rem', '1rem', '6rem', '6rem']}
+    >
       <NavBar />
       {children}
       <Footer />

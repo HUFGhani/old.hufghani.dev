@@ -6,7 +6,6 @@ import { subWeeks } from 'date-fns'
 import React from 'react'
 import useAPI from '../../hooks/useAPI'
 
-const useLocal = process.env.NODE_ENV !== `production`
 const url = `https://api.hufghani.dev/github/contributions`
 
 const GithubContributions: React.FC = () => {

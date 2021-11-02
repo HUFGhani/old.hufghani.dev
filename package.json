@@ -67,7 +67,7 @@
     "gatsby-plugin-sitemap": "^5.0.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.25",
     "husky": "^7.0.4",
-    "lint-staged": ">=11.2.4",
+    "lint-staged": ">=11.2.6",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4"
   },

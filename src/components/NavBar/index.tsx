@@ -74,6 +74,7 @@ const MenuLinks = () => {
 }
 
 const Logo = () => {
+  const { colorMode } = useColorMode()
   const { authorName } = useSEO()
   return (
     <Box className="logo">
@@ -82,6 +83,12 @@ const Logo = () => {
           as="h1"
           fontFamily="Dr Sugiyama, cursive"
           fontWeight="normal"
+          bgClip="text"
+          bgGradient={
+            colorMode === 'light'
+              ? 'linear(to-l, #7928CA, #FF0080)'
+              : 'linear(red.100 0%, orange.100 25%, yellow.100 50%)'
+          }
           sx={{
             '.logo:hover &': {
               textDecoration: 'underline',

@@ -1,4 +1,4 @@
-import { Box, Divider, Flex, Heading, Img, Text } from '@chakra-ui/react'
+import { Box, Divider, Flex, Heading, Img, Text, useColorMode } from '@chakra-ui/react'
 import loadable from '@loadable/component'
 import React from 'react'
 import { useProfilePicture } from '../hooks/useProfilePicture'
@@ -7,6 +7,7 @@ const GithubContributions = loadable(() => import('../components/githubContribut
 const SEO = loadable(() => import(`../components/SEO`))
 
 const IndexPage: React.FC = () => {
+  const { colorMode } = useColorMode()
   return (
     <>
       <SEO pageTitle="Home" />
@@ -45,7 +46,19 @@ const IndexPage: React.FC = () => {
           </Flex>
           <Box>
             <Text marginTop="2.5rem" fontSize="lg">
-              A Father, Husband, Brother, Son and Software Engineer from Manchester, United Kingdom
+              A
+              <Box
+                as="span"
+                bgClip="text"
+                bgGradient={
+                  colorMode === 'light'
+                    ? 'linear(gray.800 100%, gray.800 100%, gray.800 100%)'
+                    : 'linear(red.100 0%, orange.100 25%, yellow.100 50%)'
+                }
+              >
+                &nbsp;Father
+              </Box>
+              , Husband, Brother, Son and Software Engineer from Manchester, United Kingdom
             </Text>
           </Box>
         </Box>

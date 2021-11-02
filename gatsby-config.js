@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-loadable-components-ssr`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -74,6 +75,12 @@ module.exports = {
       resolve: `gatsby-plugin-brotli`,
       options: {
         extensions: [`css`, `html`, `js`, `svg`],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        devMode: true,
       },
     },
   ],

@@ -1,6 +1,8 @@
 import { Heading } from '@chakra-ui/react'
+import loadable from '@loadable/component'
 import React from 'react'
-import SEO from '../components/SEO'
+
+const SEO = loadable(() => import(`../components/SEO`))
 
 const Project: React.FC = () => {
   return (

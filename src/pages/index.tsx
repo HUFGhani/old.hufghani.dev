@@ -46,7 +46,7 @@ const IndexPage: React.FC = () => {
           </Flex>
           <Box>
             <Text marginTop="2.5rem" fontSize="lg">
-              A
+              A{' '}
               <Box
                 as="span"
                 bgClip="text"
@@ -56,13 +56,25 @@ const IndexPage: React.FC = () => {
                     : 'linear(red.100 0%, orange.100 25%, yellow.100 50%)'
                 }
               >
-                &nbsp;Father
+                Father
               </Box>
-              , Husband, Brother, Son and Software Engineer from Manchester, United Kingdom
+              , Husband, Brother,{' '}
+              <Box
+                as="span"
+                bgClip="text"
+                bgGradient={
+                  colorMode === 'light'
+                    ? 'linear(gray.800 100%, gray.800 100%, gray.800 100%)'
+                    : 'linear(red.100 0%, orange.100 25%, yellow.100 50%)'
+                }
+              >
+                Son
+              </Box>{' '}
+              and Software Engineer from Manchester, United Kingdom
             </Text>
           </Box>
         </Box>
-        <Divider orientation="horizontal" marginBottom="2rem" />
+        {/* <Divider orientation="horizontal" marginBottom="2rem" />
         <Flex
           as="section"
           justifyContent="center"
@@ -74,7 +86,7 @@ const IndexPage: React.FC = () => {
           <Heading as="h2" paddingBottom="40px">
             Latest Articles
           </Heading>
-        </Flex>
+        </Flex> */}
         <Divider orientation="horizontal" marginBottom="2rem" />
         <Flex
           as="section"

@@ -89,11 +89,6 @@ const Logo = () => {
               ? 'linear(to-l, #7928CA, #FF0080)'
               : 'linear(red.100 0%, orange.100 25%, yellow.100 50%)'
           }
-          sx={{
-            '.logo:hover &': {
-              textDecoration: 'underline',
-            },
-          }}
         >
           {authorName}
         </Heading>

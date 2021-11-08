@@ -50,7 +50,7 @@
     "serverless": "^2.64.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.1",
+    "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@loadable/component": "^5.15.0",
     "@types/loadable__component": "^5.13.4",

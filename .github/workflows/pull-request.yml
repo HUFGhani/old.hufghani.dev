@@ -11,8 +11,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        node-version: [14.x]
+        os: [ubuntu-latest, macos-latest]
 
     steps:
       - uses: actions/checkout@v2
@@ -36,5 +36,5 @@ jobs:
       - name: installing dependencies
         run: yarn
 
-      - name: running test
-        run: yarn test
+      # - name: running test
+      #   run: yarn test

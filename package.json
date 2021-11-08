@@ -47,7 +47,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-seo-component": "^2.0.2",
-    "serverless": "^2.64.1"
+    "serverless": "^2.65.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",

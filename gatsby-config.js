@@ -32,6 +32,14 @@ module.exports = {
       __key: `images`,
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `files`,
+        path: `${__dirname}/src/files/`,
+      },
+      __key: `files`,
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.hufghani.dev',

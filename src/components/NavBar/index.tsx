@@ -1,7 +1,8 @@
-import { Box, Flex, Heading, Stack, useColorMode } from '@chakra-ui/react'
-import { Link } from 'gatsby'
+import { Box, Flex, Heading, Link, Stack, useColorMode } from '@chakra-ui/react'
+import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
 import '../../css/typography.css'
+import { useCV } from '../../hooks/useCV'
 import { useNavMenu } from '../../hooks/useNavMenu'
 import { useSEO } from '../../hooks/useSEO'
 import ThemeToggle from '../ThemeToggle'
@@ -31,7 +32,7 @@ const MenuItem = (props: { [x: string]: any; children: string; to: string }) => 
   return (
     <Box
       borderRadius="md"
-      padding="1.5"
+      padding="0.5"
       textAlign="center"
       sx={{
         _hover: {
@@ -40,15 +41,16 @@ const MenuItem = (props: { [x: string]: any; children: string; to: string }) => 
         },
       }}
     >
-      <Link to={to} {...rest}>
+      <GatsbyLink to={to} {...rest}>
         {children}
-      </Link>
+      </GatsbyLink>
     </Box>
   )
 }
 
 const MenuLinks = () => {
   const { menu } = useNavMenu()
+
   const sortMenu = menu.sort((a: { url: string; name: string }, b: { url: string; name: string }) =>
     a.name.localeCompare(b.name)
   )
@@ -61,6 +63,7 @@ const MenuLinks = () => {
       direction="row"
       pt="3.5"
       fontSize="md"
+      textAlign="center"
     >
       <MenuItem to="/">Home</MenuItem>
       {sortMenu.map((m: { url: string; name: string }) => (
@@ -68,6 +71,9 @@ const MenuLinks = () => {
           {m.name}
         </MenuItem>
       ))}
+      <Link href={useCV()} isExternal target="_blank">
+        Curriculum vitae
+      </Link>
       <ThemeToggle />
     </Stack>
   )

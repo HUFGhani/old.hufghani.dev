@@ -1,6 +1,6 @@
-import { Box, Divider, Flex, Heading, Img, Text, useColorMode } from '@chakra-ui/react'
+import { Box, Divider, Flex, Heading, Img, SkeletonCircle, Text, useColorMode } from '@chakra-ui/react'
 import loadable from '@loadable/component'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useProfilePicture } from '../hooks/useProfilePicture'
 
 const GithubContributions = loadable(() => import('../components/githubContributions'))
@@ -8,6 +8,16 @@ const SEO = loadable(() => import(`../components/SEO`))
 
 const IndexPage: React.FC = () => {
   const { colorMode } = useColorMode()
+  const [isLoading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(true)
+    }, 500)
+
+    return () => clearTimeout(timeout)
+  }, [isLoading])
+
   return (
     <>
       <SEO pageTitle="Home" />
@@ -30,8 +40,7 @@ const IndexPage: React.FC = () => {
                 I'm Hamza U. F. Ghani
               </Heading>
             </Box>
-
-            <Box>
+            <SkeletonCircle size="160px" isLoaded={isLoading}>
               <Img
                 borderRadius="full"
                 boxSize="10rem"
@@ -42,7 +51,7 @@ const IndexPage: React.FC = () => {
                 htmlHeight="160px"
                 boxShadow="dark-lg"
               />
-            </Box>
+            </SkeletonCircle>
           </Flex>
           <Box>
             <Text marginTop="2.5rem" fontSize="lg">

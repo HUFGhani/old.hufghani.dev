@@ -36,5 +36,5 @@ jobs:
       - name: installing dependencies
         run: yarn
 
-      # - name: running test
-      #   run: yarn test
+      - name: running test
+        run: yarn test

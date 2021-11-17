@@ -31,7 +31,7 @@
     "axios": "^0.24.0",
     "date-fns": "^2.25.0",
     "framer-motion": "^4.1.17",
-    "gatsby": "^4.0.1",
+    "gatsby": "^4.2.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-brotli": "^2.1.0",
     "gatsby-plugin-loadable-components-ssr": "^4.0.0",

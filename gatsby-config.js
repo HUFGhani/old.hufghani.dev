@@ -6,8 +6,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-loadable-components-ssr`,
     {

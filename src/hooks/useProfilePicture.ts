@@ -7,12 +7,12 @@ export const useProfilePicture = () => {
         file(relativePath: { eq: "profile.png" }) {
           childImageSharp {
             fluid(maxHeight: 300, maxWidth: 300, toFormat: WEBP) {
-              src
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `
   )
-  return file.childImageSharp.fluid.src
+  return file.childImageSharp.fluid
 }

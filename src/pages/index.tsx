@@ -1,5 +1,6 @@
-import { Box, Divider, Flex, Heading, Img, SkeletonCircle, Text, useColorMode } from '@chakra-ui/react'
+import { Box, Divider, Flex, Heading, SkeletonCircle, Text, useColorMode } from '@chakra-ui/react'
 import loadable from '@loadable/component'
+import Img from 'gatsby-image'
 import React, { useEffect, useState } from 'react'
 import { useProfilePicture } from '../hooks/useProfilePicture'
 
@@ -42,14 +43,12 @@ const IndexPage: React.FC = () => {
             </Box>
             <SkeletonCircle size="160px" isLoaded={isLoading}>
               <Img
-                borderRadius="full"
-                boxSize="10rem"
-                src={useProfilePicture()}
+                fluid={useProfilePicture()}
                 alt="Hamza Umar farooq Ghani"
-                border="solid 1px black"
-                htmlWidth="160px"
-                htmlHeight="160px"
-                boxShadow="dark-lg"
+                style={{
+                  border: 'solid 1px black',
+                  borderRadius: '50%',
+                }}
               />
             </SkeletonCircle>
           </Flex>

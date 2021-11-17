@@ -45,6 +45,9 @@ const IndexPage: React.FC = () => {
               <Img
                 fluid={useProfilePicture()}
                 alt="Hamza Umar farooq Ghani"
+                fadeIn={true}
+                durationFadeIn={700}
+                loading="lazy"
                 style={{
                   border: 'solid 1px black',
                   borderRadius: '50%',

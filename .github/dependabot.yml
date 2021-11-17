@@ -18,6 +18,5 @@ updates:
     commit-message:
       prefix: 'chore'
       prefix-development: 'chore'
-      include: 'scope'
     assignees:
       - 'hufghani'

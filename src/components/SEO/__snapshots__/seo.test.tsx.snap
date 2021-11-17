@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SEO/> should render siteTitle 1`] = `
+NodeList [
+  <meta
+    content="A detailed account of what Hamza U. F. Ghani is about."
+    data-react-helmet="true"
+    name="description"
+  />,
+]
+`;

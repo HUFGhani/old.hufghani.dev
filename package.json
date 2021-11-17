@@ -15,7 +15,8 @@
     "clean": "gatsby clean",
     "type-check": "tsc --noEmit",
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^2.0.1",
@@ -53,12 +54,17 @@
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "@loadable/component": "^5.15.0",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
     "@types/loadable__component": "^5.13.4",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
+    "babel-jest": "^27.3.1",
+    "babel-preset-gatsby": "^2.2.0",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-alias": "^1.1.2",
@@ -67,6 +73,8 @@
     "gatsby-plugin-sitemap": "^5.0.0",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.25",
     "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
     "lint-staged": ">=11.2.6",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4"
@@ -142,5 +150,36 @@
     ">0.1%",
     "not IE 11",
     "not IE_Mob 11"
-  ]
+  ],
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.[jt]sx?$": "<rootDir>/jest-preprocess.js"
+    },
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.js"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".cache",
+      "public",
+      "e2e-tests"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testURL": "http://localhost",
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/loadershim.js"
+    ]
+  }
 }

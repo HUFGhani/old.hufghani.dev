@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Link, Stack, useColorMode } from '@chakra-ui/react'
+import { Box, Flex, Heading, Link, Stack, Text, useColorMode } from '@chakra-ui/react'
 import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
+import '../../css/global.css'
 import '../../css/typography.css'
 import { useCV } from '../../hooks/useCV'
 import { useNavMenu } from '../../hooks/useNavMenu'
@@ -49,6 +50,7 @@ const MenuItem = (props: { [x: string]: any; children: string; to: string }) => 
 }
 
 const MenuLinks = () => {
+  const { colorMode } = useColorMode()
   const { menu } = useNavMenu()
 
   const sortMenu = menu.sort((a: { url: string; name: string }, b: { url: string; name: string }) =>
@@ -71,9 +73,33 @@ const MenuLinks = () => {
           {m.name}
         </MenuItem>
       ))}
-      <Link href={useCV()} isExternal target="_blank">
-        Curriculum vitae
-      </Link>
+      <Box
+        borderRadius="md"
+        padding="0.5"
+        textAlign="center"
+        sx={{
+          _hover: {
+            backgroundColor:
+              colorMode === 'light' ? 'var(--chakra-colors-gray-100)' : 'var(--chakra-colors-whiteAlpha-200)',
+            textDecoration: 'none',
+          },
+        }}
+      >
+        <Link
+          href={useCV()}
+          isExternal
+          target="_blank"
+          sx={{
+            _hover: {
+              textDecoration: 'none',
+            },
+          }}
+        >
+          <Text as="abbr" title="Curriculum Vitae">
+            CV
+          </Text>
+        </Link>
+      </Box>
       <ThemeToggle />
     </Stack>
   )
@@ -84,7 +110,7 @@ const Logo = () => {
   const { authorName } = useSEO()
   return (
     <Box className="logo">
-      <Link to="/">
+      <GatsbyLink to="/">
         <Heading
           as="h1"
           fontFamily="Dr Sugiyama, cursive"
@@ -98,7 +124,7 @@ const Logo = () => {
         >
           {authorName}
         </Heading>
-      </Link>
+      </GatsbyLink>
     </Box>
   )
 }

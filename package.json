@@ -23,7 +23,7 @@
     "@chakra-ui/icons": "^1.1.1",
     "@chakra-ui/react": "^1.7.2",
     "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/styled": "^11.6.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@nivo/calendar": "^0.74.0",

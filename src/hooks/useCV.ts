@@ -15,9 +15,7 @@ export const useCV = () => {
     `
   )
 
-  const pdf = data.allFile.edges.map((file: { node: { publicURL: string } }, index: any) => {
+  return data.allFile.edges.map((file: { node: { publicURL: string } }) => {
     return file.node.publicURL
   })
-
-  return pdf
 }

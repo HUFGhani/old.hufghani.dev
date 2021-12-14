@@ -30,7 +30,7 @@
     "@nivo/core": "^0.74.0",
     "axios": "^0.24.0",
     "date-fns": "^2.27.0",
-    "framer-motion": "^5.3.3",
+    "framer-motion": "^5.4.5",
     "gatsby": "^4.3.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-brotli": "^2.1.0",

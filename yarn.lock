@@ -8997,10 +8997,10 @@ gatsby-plugin-brotli@^2.1.0:
     mkdirp "^1.0.4"
     piscina "^3.1.0"
 
-gatsby-plugin-loadable-components-ssr@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-loadable-components-ssr/-/gatsby-plugin-loadable-components-ssr-4.1.0.tgz#8b7c87274307267d77add23b136be10ca8552242"
-  integrity sha512-IJwRbY7ZvFJhXsnmT8u1oh32JaGb7xrDSm63/GAocOqBF0yl2tf34ktBL71tYy+vVJn8Rm/CF/zh/2BeSDcTPA==
+gatsby-plugin-loadable-components-ssr@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-loadable-components-ssr/-/gatsby-plugin-loadable-components-ssr-4.1.2.tgz#7e37bd10f188c22fb88842a4f353cc19341411db"
+  integrity sha512-vJ4Hu5eek6s1oPwwo3yB8/8cfKsmGkBONTL2WUPXhjVt0n4wkC9F0DQ3psu8d9Fz/75oHAvKeLCyG4bTtPTCqg==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@loadable/babel-plugin" "^5.13.2"

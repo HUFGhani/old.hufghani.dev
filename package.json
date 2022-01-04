@@ -29,7 +29,7 @@
     "@nivo/calendar": "^0.74.0",
     "@nivo/core": "^0.74.0",
     "axios": "^0.24.0",
-    "date-fns": "^2.27.0",
+    "date-fns": "^2.28.0",
     "framer-motion": "^5.5.5",
     "gatsby": "^4.4.0",
     "gatsby-image": "^3.11.0",

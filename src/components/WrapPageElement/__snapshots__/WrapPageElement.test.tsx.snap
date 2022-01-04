@@ -127,11 +127,11 @@ exports[`<WrapPageElement/> should render WrapPageElement 1`] = `
       class="css-4oq7sz"
     >
       <p
-        aria-label="© 2017 - 2021, Hamza U. F. Ghani"
+        aria-label="© 2017 - 2022, Hamza U. F. Ghani"
         class="chakra-text css-itvw0n"
         data-testid="copyRight-year"
       >
-        © 2017 - 2021, Hamza U. F. Ghani
+        © 2017 - 2022, Hamza U. F. Ghani
       </p>
       <div
         class="css-1ki2kgz"

@@ -47,8 +47,6 @@ jobs:
       - name: SonarCloud Scan
         if: runner.os == 'Linux' 
         uses: sonarsource/sonarcloud-github-action@master
-        with:
-          working-directory: '/home/runner/work/hufghani-website/hufghani-website'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  

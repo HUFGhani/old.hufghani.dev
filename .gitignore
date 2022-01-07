@@ -5,3 +5,4 @@ public
 .serverless
 .env
 coverage/*
+reports/*

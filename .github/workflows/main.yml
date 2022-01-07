@@ -42,7 +42,7 @@ jobs:
         run: yarn
 
       - name: run unit test
-        run: yarn test --coverage --testResultsProcessor=jest-sonar-reporter
+        run: yarn test --coverage
 
   deploy:
     name: Deploy

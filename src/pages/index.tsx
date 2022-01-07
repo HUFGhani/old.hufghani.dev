@@ -1,6 +1,6 @@
 import { Box, Divider, Flex, Heading, SkeletonCircle, Text, useColorMode } from '@chakra-ui/react'
 import loadable from '@loadable/component'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
 import { useProfilePicture } from '../hooks/useProfilePicture'
 
@@ -42,11 +42,9 @@ const IndexPage: React.FC = () => {
               </Heading>
             </Box>
             <SkeletonCircle size="160px" isLoaded={isLoading}>
-              <Img
-                fluid={useProfilePicture()}
+              <GatsbyImage
+                image={useProfilePicture()}
                 alt="Hamza Umar farooq Ghani"
-                fadeIn={true}
-                durationFadeIn={700}
                 loading="lazy"
                 style={{
                   border: 'solid 1px black',
@@ -86,18 +84,18 @@ const IndexPage: React.FC = () => {
           </Box>
         </Box>
         {/* <Divider orientation="horizontal" marginBottom="2rem" />
-        <Flex
-          as="section"
-          justifyContent="center"
-          flexDirection="column"
-          alignContent="center"
-          width="100%"
-          alignItems="center"
-        >
-          <Heading as="h2" paddingBottom="40px">
-            Latest Articles
-          </Heading>
-        </Flex> */}
+      <Flex
+        as="section"
+        justifyContent="center"
+        flexDirection="column"
+        alignContent="center"
+        width="100%"
+        alignItems="center"
+      >
+        <Heading as="h2" paddingBottom="40px">
+          Latest Articles
+        </Heading>
+      </Flex> */}
         <Divider orientation="horizontal" marginBottom="2rem" />
         <Flex
           as="section"

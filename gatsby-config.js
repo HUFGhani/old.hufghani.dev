@@ -1,4 +1,5 @@
 const siteConfig = require('./config/')
+require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -89,6 +90,17 @@ module.exports = {
       resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
         devMode: true,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphcms',
+      options: {
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        token: process.env.GRAPHCMS_TOKEN,
+        buildMarkdownNodes: true,
+        downloadLocalImages: true,
+        stages: ['PUBLISHED'],
+        concurrency: 20,
       },
     },
   ],

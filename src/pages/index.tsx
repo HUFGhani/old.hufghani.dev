@@ -2,6 +2,7 @@ import { Box, Divider, Flex, Heading, SkeletonCircle, Text, useColorMode } from 
 import loadable from '@loadable/component'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
+import BlogCard from '../components/BlogCard'
 import { useProfilePicture } from '../hooks/useProfilePicture'
 
 const GithubContributions = loadable(() => import('../components/githubContributions'))
@@ -83,19 +84,20 @@ const IndexPage: React.FC = () => {
             </Text>
           </Box>
         </Box>
-        {/* <Divider orientation="horizontal" marginBottom="2rem" />
-      <Flex
-        as="section"
-        justifyContent="center"
-        flexDirection="column"
-        alignContent="center"
-        width="100%"
-        alignItems="center"
-      >
-        <Heading as="h2" paddingBottom="40px">
-          Latest Articles
-        </Heading>
-      </Flex> */}
+        <Divider orientation="horizontal" marginBottom="2rem" />
+        <Flex
+          as="section"
+          justifyContent="center"
+          flexDirection="column"
+          alignContent="center"
+          width="100%"
+          alignItems="center"
+        >
+          <Heading as="h2" paddingBottom="40px">
+            Latest Articles
+          </Heading>
+          <BlogCard />
+        </Flex>
         <Divider orientation="horizontal" marginBottom="2rem" />
         <Flex
           as="section"

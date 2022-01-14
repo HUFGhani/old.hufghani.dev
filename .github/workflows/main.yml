@@ -78,8 +78,12 @@ jobs:
       - name: installing dependencies
         run: yarn
 
+      - name: create env file
+        run: |
+          echo GRAPHCMS_ENDPOINT=${{ secrets.GRAPHCMS_ENDPOINT }}  GRAPHCMS_TOKEN=${{ secrets.GRAPHCMS_TOKEN }}  >> .env
+
       - name: Building website
-        run: yarn clean && yarn build GRAPHCMS_ENDPOINT=${{ secrets.GRAPHCMS_ENDPOINT }}  GRAPHCMS_TOKEN=${{ secrets.GRAPHCMS_TOKEN }}
+        run: yarn clean && yarn build 
 
       - name: serverless deploy
         uses: serverless/github-action@master

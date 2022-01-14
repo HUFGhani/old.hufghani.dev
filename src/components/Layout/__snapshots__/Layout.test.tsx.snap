@@ -120,9 +120,13 @@ exports[`<Layout/> should render Layout 1`] = `
         </button>
       </div>
     </nav>
-    <h1>
-      Test Text
-    </h1>
+    <div
+      class="css-j5uefd"
+    >
+      <h1>
+        Test Text
+      </h1>
+    </div>
     <footer
       class="css-4oq7sz"
     >

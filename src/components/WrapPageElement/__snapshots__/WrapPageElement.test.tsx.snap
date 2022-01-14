@@ -120,9 +120,13 @@ exports[`<WrapPageElement/> should render WrapPageElement 1`] = `
         </button>
       </div>
     </nav>
-    <h1>
-      test Text
-    </h1>
+    <div
+      class="css-j5uefd"
+    >
+      <h1>
+        test Text
+      </h1>
+    </div>
     <footer
       class="css-4oq7sz"
     >

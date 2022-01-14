@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import React, { ReactElement } from 'react'
 import Footer from '../footer'
 import NavBar from '../NavBar'
@@ -17,7 +17,13 @@ const Layout: React.FC<LayoutInterfaceProp> = ({ children }) => {
       paddingX={['1rem', '1rem', '5rem', '5rem']}
     >
       <NavBar />
-      {children}
+      <Box
+        width={{ sm: `100%`, md: `90%`, lg: `90%` }}
+        paddingTop={[`0.5rem`, `0.5rem`, `5rem`, `5rem`]}
+        textAlign="center"
+      >
+        {children}
+      </Box>
       <Footer />
     </Flex>
   )

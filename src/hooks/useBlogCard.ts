@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 export const useBlogCard = () => {
-  const data = useStaticQuery(
+  return useStaticQuery(
     graphql`
       query BLOG_CARD_QUERY {
         allGraphCmsPost(limit: 3, sort: { fields: publishedAt, order: DESC }) {
@@ -15,5 +15,4 @@ export const useBlogCard = () => {
       }
     `
   )
-  return data
 }

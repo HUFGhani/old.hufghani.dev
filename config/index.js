@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         name: `About Me`,
-        url: `/about`,
+        url: `/aboutMe`,
       },
     ],
   },

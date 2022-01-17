@@ -38,7 +38,7 @@
     "gatsby-plugin-mdx": "^3.4.0",
     "gatsby-plugin-minify-html": "^1.0.4",
     "gatsby-plugin-react-helmet": "^5.4.0",
-    "gatsby-plugin-robots-txt": "^1.6.14",
+    "gatsby-plugin-robots-txt": "^1.7.0",
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-source-graphcms": "^2.7.0-next.4",

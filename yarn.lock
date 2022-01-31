@@ -8910,27 +8910,10 @@ gatsby-core-utils@3.0.0-next.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.0.0-next.0, gatsby-core-utils@^3.5.2:
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.5.2.tgz#f95e1d9034811029a1db85479a1a2bfd456818db"
-  integrity sha512-sY7BD6VlbWwrV892x9/yJPtXYaGC/GLyhabd9j2xP6zsIOW0XBHXZ4jJ+xEPaRn3CJxYgBd8KdCyoc4h1ZEFzg==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    file-type "^16.5.3"
-    fs-extra "^10.0.0"
-    got "^11.8.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
-gatsby-core-utils@^3.6.0-next.2:
-  version "3.6.0-next.2"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.6.0-next.2.tgz#bd3c712e19be06f3e6858a1503812a8050092f42"
-  integrity sha512-hGuzdBI0hAfatbTsp12Y1TIgCYmpIzqbPc/R2qfSSbrYaaqhieflATrEz+Xsq/dFqJBS5fpE9jrLHv44WCNIQA==
+gatsby-core-utils@^3.0.0-next.0, gatsby-core-utils@^3.5.2, gatsby-core-utils@^3.6.0, gatsby-core-utils@^3.6.0-next.2:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.6.0.tgz#0e2f951e2c53731bdb459eb118eb3815a90a9393"
+  integrity sha512-xmjtOWQfLinNbgBiDRT1KpEfDZm0Z0u6+hsf8EH8Ps5UCIhKinGrdtK+QH+RzPGCV1PUg/E/pnLVqQLCvD+tmA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -9032,10 +9015,10 @@ gatsby-plugin-manifest@^4.5.2:
     semver "^7.3.5"
     sharp "^0.29.3"
 
-gatsby-plugin-mdx@^3.5.2:
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.5.2.tgz#16aadb6175e054691a19ab379d88c5da18d7a8c8"
-  integrity sha512-vgBFU5jOoZcyFFKkVl8qHQKvNOicKRUw9ftc5LWEPGZjx69THAVzzG1pHWu2yUFYt2yMPfgDMmolPubun83n6Q==
+gatsby-plugin-mdx@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.6.0.tgz#fa4a6f63bcb6b70c6d534beb8e096987347088e8"
+  integrity sha512-3S4YOi6VfGPIplClqNIb7xmPAW1IzXi8LAd3y3DKtyj+hjCmMo5nG2FqN3aDvy4mVzY5Dfv2M4nMsg2yOaLyLQ==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/generator" "^7.15.4"
@@ -9053,7 +9036,7 @@ gatsby-plugin-mdx@^3.5.2:
     escape-string-regexp "^1.0.5"
     eval "^0.1.4"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.5.2"
+    gatsby-core-utils "^3.6.0"
     gray-matter "^4.0.2"
     json5 "^2.1.3"
     loader-utils "^1.4.0"

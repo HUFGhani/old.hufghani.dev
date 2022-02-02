@@ -144,7 +144,7 @@ exports[`<WrapPageElement/> should render WrapPageElement 1`] = `
           class="css-1kr4fmq"
         >
           <a
-            aria-label="GitHub"
+            aria-label="Github"
             class="chakra-link css-1udx80"
             href="https://github.com/HUFGhani"
             rel="noopener noreferrer"

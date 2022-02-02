@@ -32,6 +32,10 @@ useStaticQuery.mockImplementation(() => ({
           name: 'Instagram',
           url: 'https://www.instagram.com/the.ghani/',
         },
+        {
+          name: 'test',
+          url: 'https://www.test.com/the.ghani/',
+        },
       ],
     },
   },

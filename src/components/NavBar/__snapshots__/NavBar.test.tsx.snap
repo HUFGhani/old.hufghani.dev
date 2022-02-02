@@ -19,10 +19,10 @@ exports[`<Header/> with feature flag on should render Header 1`] = `
       </a>
     </div>
     <div
-      class="chakra-stack css-1rqb8o"
+      class="chakra-stack css-vshp8x"
     >
       <div
-        class="css-1w8wasz"
+        class="css-u2tn0h"
       >
         <a
           href="/"
@@ -31,7 +31,7 @@ exports[`<Header/> with feature flag on should render Header 1`] = `
         </a>
       </div>
       <div
-        class="css-1w8wasz"
+        class="css-u2tn0h"
       >
         <a
           href="/about"
@@ -40,7 +40,7 @@ exports[`<Header/> with feature flag on should render Header 1`] = `
         </a>
       </div>
       <div
-        class="css-1w8wasz"
+        class="css-u2tn0h"
       >
         <a
           href="/project"
@@ -49,7 +49,7 @@ exports[`<Header/> with feature flag on should render Header 1`] = `
         </a>
       </div>
       <div
-        class="css-1hqy0az"
+        class="css-bizr7z"
       >
         <a
           class="chakra-link css-10qsrqw"

@@ -1355,10 +1355,10 @@
     "@chakra-ui/react-utils" "1.2.1"
     "@chakra-ui/utils" "1.10.0"
 
-"@chakra-ui/gatsby-plugin@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/gatsby-plugin/-/gatsby-plugin-2.0.3.tgz#f999e817e81740a279210baa05d404442f71d26c"
-  integrity sha512-1euN7LZ8CTmo0cCdBCooPr19zVSF+e+A44bV+gh4XzeuRrvAHNpYQzxEbg46AmOcGo71/XfhF+zXESFXfkfGxw==
+"@chakra-ui/gatsby-plugin@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/gatsby-plugin/-/gatsby-plugin-2.0.4.tgz#fd5e022d94bbbc7d004dc0b8110fe40c22f34c8f"
+  integrity sha512-E8ik5V/nxQF3W/GzMJ3vkxYX+7/BtuWAjQykKr3GenbfZNeZvnp+WLkZxhi7Eplv2s+o1FUvKRIxG9XUuZirZQ==
 
 "@chakra-ui/hooks@1.8.0":
   version "1.8.0"

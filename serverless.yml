@@ -1,6 +1,6 @@
 service: hufghani-website
 
-frameworkVersion: '2'
+frameworkVersion: '3'
 variablesResolutionMode: 20210326
 
 provider:

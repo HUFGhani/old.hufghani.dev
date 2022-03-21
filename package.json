@@ -28,7 +28,7 @@
     "@mdx-js/react": "^1.6.22",
     "@nivo/calendar": "^0.74.0",
     "@nivo/core": "^0.74.0",
-    "axios": "^0.26.0",
+    "axios": "^0.26.1",
     "date-fns": "^2.28.0",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.9.0",

@@ -39,7 +39,7 @@
     "gatsby-plugin-minify-html": "^1.0.4",
     "gatsby-plugin-react-helmet": "^5.10.0",
     "gatsby-plugin-robots-txt": "^1.7.0",
-    "gatsby-plugin-sharp": "^4.9.0",
+    "gatsby-plugin-sharp": "^4.10.2",
     "gatsby-source-filesystem": "^4.9.0",
     "gatsby-source-graphcms": "2.7.0-next.4",
     "gatsby-transformer-sharp": "^4.9.0",

@@ -78,8 +78,6 @@ const iconbuilder = (name: string): any => {
 
   if (name === 'Twitter') {
     return FaTwitterSquare
-  } else {
-    return <Box></Box>
   }
 }
 

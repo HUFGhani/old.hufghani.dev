@@ -3,6 +3,7 @@ import loadable from '@loadable/component'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React, { useEffect, useState } from 'react'
 import BlogCard from '../components/BlogCard'
+import { useBlogCardforLandingPage } from '../hooks/useBlogCardforLandingPage'
 import { useProfilePicture } from '../hooks/useProfilePicture'
 
 const GithubContributions = loadable(() => import('../components/githubContributions'))
@@ -10,6 +11,7 @@ const SEO = loadable(() => import(`../components/SEO`))
 
 const IndexPage: React.FC = () => {
   const { colorMode } = useColorMode()
+  const blogCardData = useBlogCardforLandingPage()
   const [isLoading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -96,7 +98,7 @@ const IndexPage: React.FC = () => {
           <Heading as="h2" paddingBottom="40px">
             Latest Articles
           </Heading>
-          <BlogCard />
+          <BlogCard allGraphCmsPost={blogCardData} />
         </Flex>
         <Divider orientation="horizontal" marginBottom="2rem" />
         <Flex

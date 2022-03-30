@@ -1,11 +1,23 @@
 import { Flex, Heading, Text } from '@chakra-ui/react'
-import { Link as GatsbyLink } from 'gatsby'
+import GatsbyLink from 'gatsby-link'
 import React from 'react'
-import { useBlogCard } from '../../hooks/useBlogCard'
 
-const BlogCard: React.FC = () => {
-  const {allGraphCmsPost} = useBlogCard()
+interface Node {
+  slug: string
+  title: string
+  excerpt: string
+  publishedAt: Date
+}
 
+interface AllGraphCmsPost {
+  nodes: Node[]
+}
+
+interface Data {
+  allGraphCmsPost: AllGraphCmsPost
+}
+
+const BlogCard: React.FC<Data> = ({ allGraphCmsPost }) => {
   return (
     <Flex direction="row" overflow="hidden" overflowX="auto" width="100%" justify="space-evenly">
       {allGraphCmsPost.nodes.map((post: { title: string; excerpt: string; slug: string }) => {

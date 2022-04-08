@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer/> should render Blog card on blog page 1`] = `
+<DocumentFragment>
+  <div
+    class="css-p7ojwx"
+  >
+    <div
+      class="css-18lk41j"
+    >
+      <a
+        href="/test"
+      >
+        <h6
+          class="chakra-heading css-zcv43y"
+        >
+          test
+        </h6>
+      </a>
+      <p
+        class="chakra-text css-1cp6yu0"
+      >
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Footer/> should render Blog card on index page 1`] = `
+<DocumentFragment>
+  <div
+    class="css-p7ojwx"
+  >
+    <div
+      class="css-18lk41j"
+    >
+      <a
+        href="/blog/test"
+      >
+        <h6
+          class="chakra-heading css-zcv43y"
+        >
+          test
+        </h6>
+      </a>
+      <p
+        class="chakra-text css-1cp6yu0"
+      >
+        Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

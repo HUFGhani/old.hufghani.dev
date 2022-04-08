@@ -54,7 +54,7 @@ exports[`<Header/> with feature flag on should render Header 1`] = `
         <a
           class="chakra-link css-10qsrqw"
           href="/static/51db75c9f2982f1838540680b66abc57/CV.pdf"
-          rel="noopener noreferrer"
+          rel="noopener"
           target="_blank"
         >
           <abbr

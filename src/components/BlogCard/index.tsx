@@ -42,7 +42,7 @@ const BlogCard: React.FC<BlogCardDataInterface> = ({ allGraphCmsPost, pagelocati
             {pagelocation.pathname.includes('blog') ? (
               <>
                 <GatsbyLink to={`${post.slug}`}>
-                  <Heading as="h6" fontSize="md" paddingBottom="1">
+                  <Heading as="h3" fontSize="md" paddingBottom="1">
                     {post.title}
                   </Heading>
                 </GatsbyLink>
@@ -51,7 +51,7 @@ const BlogCard: React.FC<BlogCardDataInterface> = ({ allGraphCmsPost, pagelocati
             ) : (
               <>
                 <GatsbyLink to={`blog/${post.slug}`}>
-                  <Heading as="h6" fontSize="md" paddingBottom="1">
+                  <Heading as="h3" fontSize="md" paddingBottom="1">
                     {post.title}
                   </Heading>
                 </GatsbyLink>

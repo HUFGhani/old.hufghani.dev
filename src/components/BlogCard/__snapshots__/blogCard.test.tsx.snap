@@ -11,11 +11,11 @@ exports[`<Footer/> should render Blog card on blog page 1`] = `
       <a
         href="/test"
       >
-        <h6
+        <h3
           class="chakra-heading css-zcv43y"
         >
           test
-        </h6>
+        </h3>
       </a>
       <p
         class="chakra-text css-1cp6yu0"
@@ -38,11 +38,11 @@ exports[`<Footer/> should render Blog card on index page 1`] = `
       <a
         href="/blog/test"
       >
-        <h6
+        <h3
           class="chakra-heading css-zcv43y"
         >
           test
-        </h6>
+        </h3>
       </a>
       <p
         class="chakra-text css-1cp6yu0"

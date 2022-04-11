@@ -6,7 +6,11 @@ import { useBlogCardforLandingPage } from '../hooks/useBlogCardforLandingPage'
 
 const SEO = loadable(() => import(`../components/SEO`))
 
-const Blog: React.FC = () => {
+interface PageDataInterface {
+  location: Location
+}
+
+const Blog: React.FC<PageDataInterface> = ({ location }) => {
   const blogCardData = useBlogCardforLandingPage()
   return (
     <>
@@ -14,7 +18,7 @@ const Blog: React.FC = () => {
       <Heading>Articles</Heading>
       <main>
         <Box paddingTop="40px">
-          <BlogCard allGraphCmsPost={blogCardData} />
+          <BlogCard allGraphCmsPost={blogCardData} pagelocation={location} />
         </Box>
       </main>
     </>

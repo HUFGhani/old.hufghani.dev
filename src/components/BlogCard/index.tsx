@@ -13,17 +13,18 @@ interface AllGraphCmsPost {
   nodes: Node[]
 }
 
-interface Data {
+interface BlogCardDataInterface {
   allGraphCmsPost: AllGraphCmsPost
+  pagelocation: Location
 }
 
-const BlogCard: React.FC<Data> = ({ allGraphCmsPost }) => {
-  const initialPage = location.pathname
+const BlogCard: React.FC<BlogCardDataInterface> = ({ allGraphCmsPost, pagelocation }) => {
   return (
     <Flex direction="row" overflow="hidden" overflowX="auto" width="100%" justify="space-evenly">
-      {allGraphCmsPost.nodes.map((post: { title: string; excerpt: string; slug: string }) => {
+      {allGraphCmsPost.nodes.map((post: { title: string; excerpt: string; slug: string }, key: any) => {
         return (
           <Flex
+            key={key}
             direction="column"
             maxW="md"
             borderWidth="1px"
@@ -38,7 +39,7 @@ const BlogCard: React.FC<Data> = ({ allGraphCmsPost }) => {
             paddingX="2"
             paddingY="2"
           >
-            {initialPage.includes('blog') ? (
+            {pagelocation.pathname.includes('blog') ? (
               <>
                 <GatsbyLink to={`${post.slug}`}>
                   <Heading as="h6" fontSize="md" paddingBottom="1">

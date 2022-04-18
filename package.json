@@ -62,7 +62,7 @@
     "@types/mdx-js__react": "^1.5.5",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.14",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.15.0",
     "babel-jest": "^27.5.1",
     "babel-preset-gatsby": "^2.6.0",

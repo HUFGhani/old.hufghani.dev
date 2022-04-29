@@ -14,9 +14,7 @@ const data = {
   ],
 }
 
-const target = 'https://example.com/'
-
-const renderBlogCard = (location: Location) => {
+const renderBlogCard = (location: string) => {
   return render(
     <ChakraProvider>
       <CSSReset />
@@ -26,29 +24,15 @@ const renderBlogCard = (location: Location) => {
 }
 
 describe(`<Footer/>`, () => {
-  const { location } = window
-
-  beforeAll(() => {
-    delete window.location
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
-    window.location = {
-      pathname: '',
-    }
-  })
-  afterAll((): void => {
-    window.location = location
-  })
-
   it(`should render Blog card on index page`, () => {
     window.location.pathname = ''
-    const { asFragment } = renderBlogCard(window.location)
+    const { asFragment } = renderBlogCard('')
     expect(asFragment()).toMatchSnapshot()
   })
 
   it(`should render Blog card on blog page`, () => {
     window.location.pathname = '/blog'
-    const { asFragment } = renderBlogCard(window.location)
+    const { asFragment } = renderBlogCard('blog')
     expect(asFragment()).toMatchSnapshot()
   })
 })

@@ -50,6 +50,23 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       path: `/blog/${page.slug}`,
     })
   })
+
+  // Create blog post list pages
+  const postsPerPage = 1
+  const numPages = Math.ceil(data.posts.edges.length / postsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: path.resolve('./src/templates/blogListTemplate.tsx'),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: 1,
+      },
+    })
+  })
 }
 
 exports.createResolvers = ({ createResolvers }) => {

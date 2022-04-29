@@ -9,11 +9,7 @@ import { useProfilePicture } from '../hooks/useProfilePicture'
 const GithubContributions = loadable(() => import('../components/githubContributions'))
 const SEO = loadable(() => import(`../components/SEO`))
 
-interface PageDataInterface {
-  location: Location
-}
-
-const IndexPage: React.FC<PageDataInterface> = ({ location }) => {
+const IndexPage: React.FC = () => {
   const { colorMode } = useColorMode()
   const blogCardData = useBlogCardforLandingPage()
   const [isLoading, setLoading] = useState(false)
@@ -102,7 +98,7 @@ const IndexPage: React.FC<PageDataInterface> = ({ location }) => {
           <Heading as="h2" paddingBottom="40px">
             Latest Articles
           </Heading>
-          <BlogCard allGraphCmsPost={blogCardData} pagelocation={location} />
+          <BlogCard allGraphCmsPost={blogCardData} pagelocation={'index'} />
         </Flex>
         <Divider orientation="horizontal" marginBottom="2rem" />
         <Flex

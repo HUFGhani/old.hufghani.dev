@@ -15,7 +15,7 @@ interface AllGraphCmsPost {
 
 interface BlogCardDataInterface {
   allGraphCmsPost: AllGraphCmsPost
-  pagelocation: Location
+  pagelocation: string
 }
 
 const BlogCard: React.FC<BlogCardDataInterface> = ({ allGraphCmsPost, pagelocation }) => {
@@ -39,7 +39,7 @@ const BlogCard: React.FC<BlogCardDataInterface> = ({ allGraphCmsPost, pagelocati
             paddingX="2"
             paddingY="2"
           >
-            {pagelocation.pathname.includes('blog') ? (
+            {pagelocation === 'blog' ? (
               <>
                 <GatsbyLink to={`${post.slug}`}>
                   <Heading as="h3" fontSize="md" paddingBottom="1">

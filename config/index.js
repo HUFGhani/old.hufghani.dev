@@ -22,10 +22,6 @@ module.exports = {
         name: `About Me`,
         url: `/aboutMe`,
       },
-      {
-        name: `Blog`,
-        url: `/blog`,
-      },
     ],
   },
 }

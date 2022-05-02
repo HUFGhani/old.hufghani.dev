@@ -63,7 +63,7 @@
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.14",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.15.0",
+    "@typescript-eslint/parser": "^5.21.0",
     "babel-jest": "^27.5.1",
     "babel-preset-gatsby": "^2.6.0",
     "eslint": "^8.12.0",
